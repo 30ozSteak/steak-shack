@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React, { useContext } from "react"
 import { FaShoppingCart } from "react-icons/fa"
 import "../style.scss"
+import Cart from "./Cart/Cart"
 import logo from "../images/logo.svg"
 
 import { StoreContext } from "../context/StoreContext"
@@ -12,10 +13,7 @@ const Header = ({ siteTitle }) => {
   debugger
 
   return (
-    <header
-      className="navbar"
-      style={{ background: "var(--purp)", boxShadow: "var(--elevation-2)" }}
-    >
+    <header className="navbar">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item"></Link>
       </div>
@@ -27,6 +25,7 @@ const Header = ({ siteTitle }) => {
           />
         </div>
       </div>
+      <Cart />
     </header>
   )
 }
