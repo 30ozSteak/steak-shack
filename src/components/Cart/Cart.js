@@ -1,11 +1,12 @@
 import React, { useContext } from "react"
 import { StoreContext } from "../../context/StoreContext"
+import { animated } from "react-spring"
 
-const Cart = () => {
+const Cart = ({ style }) => {
   const { isCartOpen, checkout } = useContext(StoreContext)
 
   return (
-    <div
+    <animated.div
       style={{
         position: "fixed",
         top: 0,
@@ -13,7 +14,9 @@ const Cart = () => {
         width: "50%",
         height: "100%",
         background: "white",
+        padding: 60,
         boxShadow: "var(--elevation-2)",
+        ...style,
       }}
     >
       <h3>Cart</h3>
@@ -24,7 +27,7 @@ const Cart = () => {
           <p>${item.variant.price}</p>
         </div>
       ))}
-    </div>
+    </animated.div>
   )
 }
 

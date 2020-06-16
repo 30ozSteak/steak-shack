@@ -4,13 +4,17 @@ import React, { useContext } from "react"
 import { FaShoppingCart } from "react-icons/fa"
 import "../style.scss"
 import Cart from "./Cart/Cart"
-import logo from "../images/logo.svg"
+import { useTransition, animated } from "react-spring"
 
 import { StoreContext } from "../context/StoreContext"
 
 const Header = ({ siteTitle }) => {
-  const { isCartOpen, addProductToCart, client } = useContext(StoreContext)
-  debugger
+  const { isCartOpen, toggleCartOpen } = useContext(StoreContext)
+  const transitions = useTransition(isCartOpen, null, {
+    from: { transform: "translate3d(100%, 0, 0)" },
+    enter: { transform: "translate3d(0, 0, 0)" },
+    leave: { transform: "translate3d(100%, 0, 0)" },
+  })
 
   return (
     <header className="navbar">
@@ -19,13 +23,25 @@ const Header = ({ siteTitle }) => {
       </div>
       <div className="navbar-end">
         <div className="navbar-item">
-          <FaShoppingCart
-            onClick={addProductToCart}
-            style={{ color: "white", height: 30, width: 30 }}
-          />
+          <button onClick={toggleCartOpen}>
+            <FaShoppingCart
+              style={{
+                position: "fixed",
+                top: 0,
+                right: 0,
+                color: "white",
+                height: 90,
+                width: 30,
+                border: "1px solid black",
+                zIndex: 20,
+              }}
+            />
+          </button>
         </div>
       </div>
-      <Cart />
+      {transitions.map(
+        ({ item, key, props }) => item && <Cart key={key} style={props} />
+      )}
     </header>
   )
 }
