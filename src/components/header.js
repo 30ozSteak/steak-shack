@@ -17,13 +17,7 @@ const Header = ({ siteTitle }) => {
       style={{ background: "var(--purp)", boxShadow: "var(--elevation-2)" }}
     >
       <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <img
-            style={{ height: 60, maxHeight: "none", marginBottom: 0 }}
-            src={logo}
-            alt="Level Up Logo"
-          />
-        </Link>
+        <Link to="/" className="navbar-item"></Link>
       </div>
       <div className="navbar-end">
         <div className="navbar-item">
