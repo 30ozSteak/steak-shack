@@ -8,7 +8,8 @@ import logo from "../images/logo.svg"
 import { StoreContext } from "../context/StoreContext"
 
 const Header = ({ siteTitle }) => {
-  const { isCartOpen, addProductToCart } = useContext(StoreContext)
+  const { isCartOpen, addProductToCart, client } = useContext(StoreContext)
+  debugger
 
   return (
     <header
