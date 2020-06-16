@@ -13,12 +13,15 @@ const defaultValues = {
     console.log("added!")
   },
   client,
+  checkout: {
+    lineItems: [],
+  },
 }
 
 export const StoreContext = createContext(defaultValues)
 
 export const StoreProvider = ({ children }) => {
-  const [checkout, setCheckout] = useState({})
+  const [checkout, setCheckout] = useState(defaultValues.checkout)
 
   useEffect(() => {
     initializeCheckout()
@@ -62,20 +65,23 @@ export const StoreProvider = ({ children }) => {
           quantity: 1,
         },
       ]
-      const addItems = await client.checkout.addLineItems(
+      const newCheckout = await client.checkout.addLineItems(
         checkout.id,
         lineItems
       )
       // Buy Now Button Code
       // window.open(addItems.webUrl, "_blank")
-      console.log(addItems.webUrl)
+      // console.log(addItems.webUrl)
+      setCheckout(newCheckout)
     } catch (e) {
       console.error(e)
     }
   }
 
   return (
-    <StoreContext.Provider value={{ ...defaultValues, addProductToCart }}>
+    <StoreContext.Provider
+      value={{ ...defaultValues, checkout, addProductToCart }}
+    >
       {children}
     </StoreContext.Provider>
   )

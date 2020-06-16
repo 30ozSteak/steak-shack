@@ -1,6 +1,9 @@
-import React from "react"
+import React, { useContext } from "react"
 import { StoreContext } from "../../context/StoreContext"
+
 const Cart = () => {
+  const { isCartOpen, checkout } = useContext(StoreContext)
+
   return (
     <div
       style={{
@@ -13,7 +16,14 @@ const Cart = () => {
         boxShadow: "var(--elevation-2)",
       }}
     >
-      <h3>CART</h3>
+      <h3>Cart</h3>
+      {checkout.lineItems.map(item => (
+        <div key={item.id}>
+          <h4> {item.title}</h4>
+          <p>{item.quantity}</p>
+          <p>${item.variant.price}</p>
+        </div>
+      ))}
     </div>
   )
 }
