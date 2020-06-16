@@ -10,8 +10,8 @@ module.exports = {
     {
       resolve: "gatsby-source-shopify",
       options: {
-        shopName: "YOUR_SHOPNAME",
-        accessToken: "YOUR_TOKEN",
+        shopName: "nicks-steak-n-shake",
+        accessToken: "088a5b7e7fd03d328579a8c85c4d2aa9",
         verbose: true,
         paginationSize: 30,
       },
