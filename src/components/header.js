@@ -17,23 +17,22 @@ const Header = ({ siteTitle }) => {
   })
 
   return (
-    <header className="navbar">
-      <div className="navbar-brand">
+    <header className="level is-mobile">
+      <div className="level-left">
         <Link to="/" className="navbar-item"></Link>
       </div>
-      <div className="navbar-end">
+      <div className="level-right">
         <div className="navbar-item">
-          <button onClick={toggleCartOpen}>
+          <button
+            className="button"
+            style={{ background: "transparent", border: "none" }}
+            onClick={toggleCartOpen}
+          >
             <FaShoppingCart
               style={{
-                position: "fixed",
-                top: 0,
-                right: 0,
-                color: "white",
-                height: 90,
+                color: "black",
+                height: 30,
                 width: 30,
-                border: "1px solid black",
-                zIndex: 20,
               }}
             />
           </button>
