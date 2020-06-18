@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { StoreContext } from "../../context/StoreContext"
 import { animated } from "react-spring"
 
@@ -8,8 +8,12 @@ const Cart = ({ style }) => {
     toggleCartOpen,
     checkout,
     removeProductFromCart,
+    checkCoupon,
+    removeCoupon,
   } = useContext(StoreContext)
-  // debugger
+
+  const [coupon, setCoupon] = useState("")
+
   return (
     <animated.div
       style={{
@@ -59,6 +63,44 @@ const Cart = ({ style }) => {
           </button>
         </div>
       ))}
+      <div>
+        {checkout.discountApplications.length > 0 ? (
+          <p>
+            <h5 className="title">
+              {checkout.discountApplications[0].code} - %
+              {checkout.discountApplications[0].value.percentage}{" "}
+            </h5>
+            <button
+              className="is-small button is-danger is-outlined"
+              onClick={() =>
+                removeCoupon(checkout.discountApplications[0].code)
+              }
+            >
+              Remove
+            </button>
+          </p>
+        ) : (
+          <form
+            onSubmit={e => {
+              e.preventDefault()
+              checkCoupon(coupon)
+            }}
+          >
+            <div className="field">
+              <label htmlFor="coupon" className="label">
+                Coupon
+              </label>
+              <input
+                type="text"
+                className="input"
+                value={coupon}
+                onChange={e => setCoupon(e.target.value)}
+              />
+            </div>
+            <button className="button">Add Coupon</button>
+          </form>
+        )}
+      </div>
       <hr />
       <div>
         Total: <h5 className="title">$ {checkout.totalPrice}</h5>
