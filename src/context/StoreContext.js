@@ -20,6 +20,8 @@ const defaultValues = {
 
 export const StoreContext = createContext(defaultValues)
 
+const isBrowser = typeof window !== "undefined"
+
 export const StoreProvider = ({ children }) => {
   const [checkout, setCheckout] = useState(defaultValues.checkout)
   const [isCartOpen, setCartOpen] = useState(false)
@@ -30,34 +32,42 @@ export const StoreProvider = ({ children }) => {
     initializeCheckout()
   }, [])
 
+  const getNewId = async () => {
+    try {
+      const newCheckout = await client.checkout.create()
+      if (isBrowser) {
+        localStorage.setItem("checkout_id", newCheckout.id)
+      }
+      return newCheckout
+    } catch (e) {
+      console.error(e)
+    }
+  }
+
   const initializeCheckout = async () => {
     try {
       // check if its a browser
-      const isBrowser = typeof window !== "undefined"
 
       // check if id exists
       const currentCheckoutId = isBrowser
         ? localStorage.getItem("checkout_id")
         : null
 
-      // initializing variable
       let newCheckout = null
 
-      // if id exists, fetch checkout from shopify
       if (currentCheckoutId) {
         newCheckout = await client.checkout.fetch(currentCheckoutId)
-      } else {
-        // then, if it doesnt exist, create new checkout
-
-        newCheckout = await client.checkout.create()
-        if (isBrowser) {
-          localStorage.setItem("checkout_id", newCheckout.id)
+        if (newCheckout.completedAt) {
+          newCheckout = await getNewId()
         }
+      } else {
+        newCheckout = await getNewId()
       }
 
-      // set checkout to state
       setCheckout(newCheckout)
-    } catch (e) {}
+    } catch (e) {
+      console.error(e)
+    }
   }
 
   const addProductToCart = async variantId => {
