@@ -11,6 +11,7 @@ const defaultValues = {
   toggleCartOpen: () => {},
   cart: [],
   addProductToCart: () => {},
+  removeProductFromCart: () => {},
   client,
   checkout: {
     lineItems: [],
@@ -71,9 +72,16 @@ export const StoreProvider = ({ children }) => {
         checkout.id,
         lineItems
       )
-      // Buy Now Button Code
-      // window.open(addItems.webUrl, "_blank")
-      // console.log(addItems.webUrl)
+      setCheckout(newCheckout)
+    } catch (e) {
+      console.error(e)
+    }
+  }
+  const removeProductFromCart = async lineItemId => {
+    try {
+      const newCheckout = await client.checkout.removeLineItems(checkout.id, [
+        lineItemId,
+      ])
       setCheckout(newCheckout)
     } catch (e) {
       console.error(e)
@@ -86,6 +94,7 @@ export const StoreProvider = ({ children }) => {
         ...defaultValues,
         checkout,
         addProductToCart,
+        removeProductFromCart,
         toggleCartOpen,
         isCartOpen,
       }}
