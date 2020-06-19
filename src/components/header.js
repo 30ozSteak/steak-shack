@@ -32,7 +32,7 @@ const Header = ({ siteTitle }) => {
         }}
       >
         <div className="level-left">
-          <Link to="/"></Link>
+          <Link to="/">Home</Link>
           <Nav />
         </div>
         <div className="level-right">
