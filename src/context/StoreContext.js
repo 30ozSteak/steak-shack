@@ -8,6 +8,7 @@ const client = Client.buildClient({
 
 const defaultValues = {
   isCartOpen: false,
+  isLoading: false,
   toggleCartOpen: () => {},
   cart: [],
   addProductToCart: () => {},
@@ -26,6 +27,7 @@ const isBrowser = typeof window !== "undefined"
 export const StoreProvider = ({ children }) => {
   const [checkout, setCheckout] = useState(defaultValues.checkout)
   const [isCartOpen, setCartOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const toggleCartOpen = () => setCartOpen(!isCartOpen)
 
@@ -73,6 +75,7 @@ export const StoreProvider = ({ children }) => {
 
   const addProductToCart = async variantId => {
     try {
+      setIsLoading(true)
       const lineItems = [
         {
           variantId,
@@ -84,6 +87,7 @@ export const StoreProvider = ({ children }) => {
         lineItems
       )
       setCheckout(newCheckout)
+      setCheckout(false)
     } catch (e) {
       console.error(e)
     }
@@ -100,16 +104,20 @@ export const StoreProvider = ({ children }) => {
   }
 
   const checkCoupon = async coupon => {
+    setIsLoading(true)
     const newCheckout = await client.checkout.addDiscount(checkout.id, coupon)
     setCheckout(newCheckout)
+    setIsLoading(false)
   }
 
   const removeCoupon = async coupon => {
+    setIsLoading(true)
     const newCheckout = await client.checkout.removeDiscount(
       checkout.id,
       coupon
     )
     setCheckout(newCheckout)
+    setIsLoading(false)
   }
 
   return (
@@ -123,6 +131,7 @@ export const StoreProvider = ({ children }) => {
         isCartOpen,
         checkCoupon,
         removeCoupon,
+        isLoading,
       }}
     >
       {children}
