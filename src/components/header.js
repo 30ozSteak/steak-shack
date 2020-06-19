@@ -1,12 +1,14 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useContext } from "react"
+import { useTransition } from "react-spring"
 import { FaShoppingCart } from "react-icons/fa"
 import "../style.scss"
+import { StoreContext } from "../context/StoreContext"
+import logo from "../images/logo.svg"
 import Cart from "./Cart/Cart"
 import Loader from "./Loader"
-import { useTransition } from "react-spring"
-import { StoreContext } from "../context/StoreContext"
+import Nav from "./Nav"
 
 const Header = ({ siteTitle }) => {
   const { isCartOpen, toggleCartOpen, checkout, isLoading } = useContext(
@@ -17,19 +19,24 @@ const Header = ({ siteTitle }) => {
     enter: { transform: "translate3d(0, 0, 0)" },
     leave: { transform: "translate3d(100%, 0, 0)" },
   })
-
   const quantity = checkout.lineItems.reduce((total, item) => {
     return total + item.quantity
   }, 0)
-
   return (
     <>
-      <header className="level is-mobile">
+      <header
+        className="level is-mobile"
+        style={{
+          padding: "10px 5%",
+          boxShadow: "var(--elevation-2)",
+        }}
+      >
         <div className="level-left">
-          <Link to="/" className="navbar-item"></Link>
+          <Link to="/"></Link>
+          <Nav />
         </div>
         <div className="level-right">
-          <div className="navbar-item">
+          <div>
             <button
               className="button"
               style={{
@@ -42,21 +49,16 @@ const Header = ({ siteTitle }) => {
               {quantity > 0 && (
                 <div
                   style={{
+                    color: "white",
+                    position: "absolute",
                     background: "var(--red)",
                     borderRadius: 15,
-                    boxShadow: "1px 1px lightGray",
-                    color: "white",
-                    fontWeight: 800,
-                    fontSize: 12,
-                    height: 20,
-                    left: 0,
-                    lineHeight: "20px",
-                    opacity: 1,
-                    position: "absolute",
                     textAlign: "center",
+                    height: 30,
                     top: -5,
-                    transition: 0.2,
-                    width: 20,
+                    right: -5,
+                    width: 30,
+                    lineHeight: "30px",
                   }}
                 >
                   {quantity}
@@ -76,6 +78,7 @@ const Header = ({ siteTitle }) => {
     </>
   )
 }
+
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }

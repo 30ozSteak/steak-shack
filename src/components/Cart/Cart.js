@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react"
-import { StoreContext } from "../../context/StoreContext"
 import { animated } from "react-spring"
+import { StoreContext } from "../../context/StoreContext"
 
 const Cart = ({ style }) => {
   const {
     isCartOpen,
-    toggleCartOpen,
     checkout,
+    toggleCartOpen,
     removeProductFromCart,
     checkCoupon,
     removeCoupon,
@@ -17,15 +17,15 @@ const Cart = ({ style }) => {
   return (
     <animated.div
       style={{
+        zIndex: 100,
         position: "fixed",
         top: 0,
         right: 0,
-        width: "30%",
+        width: "50%",
         height: "100%",
-        zIndex: 50,
         background: "white",
         padding: "40px 2%",
-        boxShadow: "var(--elevation-2)",
+        boxShadow: "var(--elevation-4)",
         ...style,
       }}
     >
@@ -38,78 +38,97 @@ const Cart = ({ style }) => {
         }}
         className="delete is-large"
         onClick={toggleCartOpen}
-      ></button>
+      >
+        Close Cart
+      </button>
       <h3 className="title">Cart</h3>
-      {checkout.lineItems.map(item => (
-        <div key={item.id} style={{ display: "flex", marginBottom: "2rem" }}>
-          <div
-            style={{
-              width: 80,
-              height: 80,
-              overflow: "hidden",
-              marginRight: 20,
-            }}
-          >
-            <img src={item.variant.image.src} />
-          </div>
-          <h4 className="title is-4"> {item.title}</h4>
-          <p className="subtitle is-5">${item.variant.price}</p>
-          <p className="subtitle is-5">Quantity: {item.quantity}</p>
-          <button
-            onClick={() => removeProductFromCart(item.id)}
-            className="is-small button is-danger is-outlined"
-          >
-            Remove
-          </button>
-        </div>
-      ))}
-      <div>
-        {checkout.discountApplications.length > 0 ? (
-          <p>
-            <h5 className="title">
-              {checkout.discountApplications[0].code} - %
-              {checkout.discountApplications[0].value.percentage}{" "}
-            </h5>
-            <button
-              className="is-small button is-danger is-outlined"
-              onClick={() =>
-                removeCoupon(checkout.discountApplications[0].code)
-              }
+      {checkout.lineItems.length > 0 ? (
+        <>
+          {checkout.lineItems.map(item => (
+            <div
+              key={item.id}
+              style={{ display: "flex", marginBottom: "2rem" }}
             >
-              Remove
-            </button>
-          </p>
-        ) : (
-          <form
-            onSubmit={e => {
-              e.preventDefault()
-              checkCoupon(coupon)
-            }}
-          >
-            <div className="field">
-              <label htmlFor="coupon" className="label">
-                Coupon
-              </label>
-              <input
-                type="text"
-                className="input"
-                value={coupon}
-                onChange={e => setCoupon(e.target.value)}
-              />
+              <div
+                style={{
+                  width: 60,
+                  height: 60,
+                  overflow: "hidden",
+                  marginRight: 10,
+                }}
+              >
+                <img src={item.variant.image.src} alt="" />
+              </div>
+              <div>
+                <h4 className="title is-4">{item.title}</h4>
+                <p className="subtitle is-5">${item.variant.price}</p>
+                <p className="subtitle is-5">Qty: {item.quantity}</p>
+                <button
+                  onClick={() => removeProductFromCart(item.id)}
+                  className="is-small button is-danger is-outlined"
+                >
+                  Remove
+                </button>
+              </div>
             </div>
-            <button className="button">Add Coupon</button>
-          </form>
-        )}
-      </div>
-      <hr />
-      <div>
-        Total: <h5 className="title">$ {checkout.totalPrice}</h5>
-      </div>
-      <div style={{ marginTop: "2rem" }}>
-        <a href={checkout.webUrl} className="button is-fullwidth is-primary">
-          Checkout Now
-        </a>
-      </div>
+          ))}
+
+          <div>
+            {checkout.discountApplications.length > 0 ? (
+              <p>
+                Coupon:
+                <h5 className="title">
+                  {checkout.discountApplications[0].code} -{" "}
+                  {checkout.discountApplications[0].value.percentage}% off
+                </h5>
+                <button
+                  onClick={() =>
+                    removeCoupon(checkout.discountApplications[0].code)
+                  }
+                  className="is-small button is-danger is-outlined"
+                >
+                  Remove
+                </button>
+              </p>
+            ) : (
+              <form
+                onSubmit={e => {
+                  e.preventDefault()
+                  checkCoupon(coupon)
+                }}
+              >
+                <div className="field">
+                  <label htmlFor="coupon" className="label">
+                    Coupon
+                  </label>
+                  <input
+                    className="input"
+                    id="coupon"
+                    value={coupon}
+                    onChange={e => setCoupon(e.target.value)}
+                    type="text"
+                  />
+                </div>
+                <button className="button">Add Coupon</button>
+              </form>
+            )}
+          </div>
+          <hr />
+          <div>
+            Total: <h5 className="title">${checkout.totalPrice}</h5>
+          </div>
+          <div style={{ marginTop: "2rem" }}>
+            <a
+              href={checkout.webUrl}
+              className="button is-fullwidth is-success"
+            >
+              Checkout Now
+            </a>
+          </div>
+        </>
+      ) : (
+        <p>No items in cart</p>
+      )}
     </animated.div>
   )
 }

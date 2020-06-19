@@ -22,12 +22,13 @@ const defaultValues = {
 
 export const StoreContext = createContext(defaultValues)
 
+// Check if it's a browser
 const isBrowser = typeof window !== "undefined"
 
 export const StoreProvider = ({ children }) => {
   const [checkout, setCheckout] = useState(defaultValues.checkout)
   const [isCartOpen, setCartOpen] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setLoading] = useState(false)
 
   const toggleCartOpen = () => setCartOpen(!isCartOpen)
 
@@ -49,9 +50,7 @@ export const StoreProvider = ({ children }) => {
 
   const initializeCheckout = async () => {
     try {
-      // check if its a browser
-
-      // check if id exists
+      // Check if id exists
       const currentCheckoutId = isBrowser
         ? localStorage.getItem("checkout_id")
         : null
@@ -59,14 +58,17 @@ export const StoreProvider = ({ children }) => {
       let newCheckout = null
 
       if (currentCheckoutId) {
+        // If id exists, fetch checkout from Shopify
         newCheckout = await client.checkout.fetch(currentCheckoutId)
         if (newCheckout.completedAt) {
           newCheckout = await getNewId()
         }
       } else {
+        // If id does not, create new checkout
         newCheckout = await getNewId()
       }
 
+      // Set checkout to state
       setCheckout(newCheckout)
     } catch (e) {
       console.error(e)
@@ -75,7 +77,7 @@ export const StoreProvider = ({ children }) => {
 
   const addProductToCart = async variantId => {
     try {
-      setIsLoading(true)
+      setLoading(true)
       const lineItems = [
         {
           variantId,
@@ -86,38 +88,45 @@ export const StoreProvider = ({ children }) => {
         checkout.id,
         lineItems
       )
+      // Buy Now Button Code
+      // window.open(addItems.webUrl, "_blank")
       setCheckout(newCheckout)
-      setCheckout(false)
+      setLoading(false)
     } catch (e) {
+      setLoading(false)
       console.error(e)
     }
   }
+
   const removeProductFromCart = async lineItemId => {
     try {
+      setLoading(true)
       const newCheckout = await client.checkout.removeLineItems(checkout.id, [
         lineItemId,
       ])
       setCheckout(newCheckout)
+      setLoading(false)
     } catch (e) {
+      setLoading(false)
       console.error(e)
     }
   }
 
   const checkCoupon = async coupon => {
-    setIsLoading(true)
+    setLoading(true)
     const newCheckout = await client.checkout.addDiscount(checkout.id, coupon)
     setCheckout(newCheckout)
-    setIsLoading(false)
+    setLoading(false)
   }
 
   const removeCoupon = async coupon => {
-    setIsLoading(true)
+    setLoading(true)
     const newCheckout = await client.checkout.removeDiscount(
       checkout.id,
       coupon
     )
     setCheckout(newCheckout)
-    setIsLoading(false)
+    setLoading(false)
   }
 
   return (
@@ -126,9 +135,9 @@ export const StoreProvider = ({ children }) => {
         ...defaultValues,
         checkout,
         addProductToCart,
-        removeProductFromCart,
         toggleCartOpen,
         isCartOpen,
+        removeProductFromCart,
         checkCoupon,
         removeCoupon,
         isLoading,
