@@ -105,16 +105,12 @@ h5 span {
   height: 100%;
 }
 
-@media (max-width: 810px) {
-  .cart-icon-container {
-    font-size: 1rem;
-  }
-}
-
 @media (max-width: 700px) {
-  .cart-icon-container svg {
-    height: 2rem;
-    width: 2rem;
+  .cart-icon-container {
+    // height: 2rem;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
   }
 
   .cart-open {
