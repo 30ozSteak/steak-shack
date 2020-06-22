@@ -4,7 +4,6 @@ import { StoreContext } from "../../context/StoreContext"
 
 const Cart = ({ style }) => {
   const {
-    isCartOpen,
     checkout,
     toggleCartOpen,
     removeProductFromCart,

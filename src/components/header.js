@@ -13,9 +13,7 @@ import Nav from "./Nav"
 import "../style.scss"
 
 const Header = ({ siteTitle }) => {
-  const { isCartOpen, toggleCartOpen, checkout, isLoading } = useContext(
-    StoreContext
-  )
+  const { isCartOpen, toggleCartOpen, checkout } = useContext(StoreContext)
   debugger
 
   const transitions = useTransition(isCartOpen, null, {
