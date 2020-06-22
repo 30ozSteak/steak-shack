@@ -54,7 +54,7 @@ const Footer = () => (
         Steak Shack
       </p>
       <p>
-        © Nick Dambrosio {new Date().getFullYear()} <br />
+        Nick Dambrosio {new Date().getFullYear()} <br />
         Built with
         <a href="https://www.gatsbyjs.org"> Gatsby</a>
         <br />
