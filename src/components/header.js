@@ -24,15 +24,30 @@ const Header = ({ siteTitle }) => {
   }, 0)
   return (
     <>
+      <div
+        className="banner"
+        style={{ height: "3rem", backgroundColor: "#ced3ca" }}
+      ></div>
       <header
         className="level is-mobile"
         style={{
-          padding: "10px 5%",
-          boxShadow: "var(--elevation-2)",
+          padding: "20px 5%",
+          minHeight: "5rem",
         }}
       >
         <div className="level-left">
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <h1
+              style={{
+                color: "black",
+                fontSize: "2rem",
+                marginRight: "5rem",
+                fontWeight: 300,
+              }}
+            >
+              Steak Shack
+            </h1>
+          </Link>
           <Nav />
         </div>
         <div className="level-right">
@@ -46,27 +61,22 @@ const Header = ({ siteTitle }) => {
               }}
               onClick={toggleCartOpen}
             >
+              <FaShoppingCart
+                style={{ color: "black", height: 30, width: 30 }}
+              />
               {quantity > 0 && (
                 <div
                   style={{
-                    color: "white",
-                    position: "absolute",
-                    background: "var(--red)",
-                    borderRadius: 15,
+                    color: "black",
                     textAlign: "center",
                     height: 30,
-                    top: -5,
-                    right: -5,
                     width: 30,
                     lineHeight: "30px",
                   }}
                 >
-                  {quantity}
+                  {quantity} /
                 </div>
               )}
-              <FaShoppingCart
-                style={{ color: "black", height: 30, width: 30 }}
-              />
             </button>
           </div>
         </div>

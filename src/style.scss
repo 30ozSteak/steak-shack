@@ -1,4 +1,8 @@
 @charset "utf-8";
+@font-face {
+  font-family: "Steak";
+  src: url("./fonts/CHEESEBURGA.woff") format("woff");
+}
 
 // If need, change your variables before importing Bulma
 :root {
@@ -81,6 +85,10 @@
 
   /* Margin */
   --margin: 2.75rem 0 1rem;
+
+  a:hover {
+    color: blue;
+  }
 }
 
 @import "~bulma/bulma.sass";
