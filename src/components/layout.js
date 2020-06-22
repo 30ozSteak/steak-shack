@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
           <h2 style={{ fontSize: "3rem" }}> Follow us on Twitter </h2>
           <p>
             Be the first to know when new products drop and get
-            behind-the-scenes content straight from Steak Shack's founder.
+            behind-the-scenes content straight from Steak n Shake's founder.
           </p>
         </div>
         <Footer />

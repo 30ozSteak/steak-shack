@@ -52,20 +52,22 @@ const Header = ({ siteTitle }) => {
         style={{
           padding: "20px 5%",
           minHeight: "5rem",
+          paddingLeft: "1.5%",
           margin: 0,
         }}
       >
         <div className="level-left">
           <Link to="/">
             <h1
+              className="title"
               style={{
                 color: "black",
                 fontSize: "2rem",
                 marginRight: "5rem",
-                fontWeight: 300,
+                fontWeight: 500,
               }}
             >
-              Steak Shack
+              Steak n' Shake
             </h1>
           </Link>
           <Nav />
@@ -82,7 +84,12 @@ const Header = ({ siteTitle }) => {
               onClick={toggleCartOpen}
             >
               <FaShoppingCart
-                style={{ color: "black", height: 30, width: 30 }}
+                style={{
+                  color: "black",
+                  height: 30,
+                  width: 30,
+                  margin: "0 1rem",
+                }}
               />
               {quantity > 0 && (
                 <div

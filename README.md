@@ -5,5 +5,5 @@
   </a>
 </p>
 <h1 align="center">
-  Nicks Steak Shack, coming soon lol
+  Nicks Steak n Shake, coming soon lol
 </h1>

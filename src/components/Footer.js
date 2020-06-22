@@ -51,7 +51,7 @@ const Footer = () => (
           userSelect: "none",
         }}
       >
-        Steak Shack
+        Steak n' Shake
       </p>
       <p>
         Nick Dambrosio {new Date().getFullYear()} <br />
