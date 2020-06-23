@@ -12,7 +12,7 @@ import Nav from "./Nav"
 
 import "../style.scss"
 
-const Header = ({ siteTitle }) => {
+const Sidebar = ({ siteTitle }) => {
   const { isCartOpen, toggleCartOpen, checkout } = useContext(StoreContext)
   debugger
 
@@ -47,7 +47,7 @@ const Header = ({ siteTitle }) => {
         </a>{" "}
         on Twitter for 10% off!
       </div>
-      <header
+      <Sidebar
         className="level is-mobile"
         style={{
           padding: "20px 5%",
@@ -110,18 +110,18 @@ const Header = ({ siteTitle }) => {
         {transitions.map(
           ({ item, key, props }) => item && <Cart key={key} style={props} />
         )}
-      </header>
+      </Sidebar>
       <Loader />
     </>
   )
 }
 
-Header.propTypes = {
+Sidebar.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+Sidebar.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default Sidebar
