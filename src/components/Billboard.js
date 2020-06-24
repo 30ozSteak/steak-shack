@@ -23,7 +23,7 @@ const Billboard = () => {
             id
             localFile {
               childImageSharp {
-                fluid(maxWidth: 600, maxHeight: 400) {
+                fluid(maxWidth: 1080, maxHeight: 400) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

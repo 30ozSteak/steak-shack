@@ -32,15 +32,16 @@ const Header = ({ siteTitle }) => {
       <Banner />
       <div
         style={{
+          backgroundColor: "#fafafa",
+          borderRight: "1px solid #f2f2f2",
+          height: "100vh",
+          margin: 0,
+          minHeight: "5rem",
           padding: "20px 5%",
           paddingTop: "150px",
-          minHeight: "5rem",
-          backgroundColor: "white",
-          width: "225px",
-          height: "100vh",
           position: "fixed",
           paddingLeft: "1.5%",
-          margin: 0,
+          width: "225px",
           zIndex: 4,
         }}
       >
@@ -58,8 +59,9 @@ const Header = ({ siteTitle }) => {
               <AiOutlineShopping
                 style={{
                   color: "black",
-                  height: 30,
-                  width: 30,
+                  height: 60,
+                  width: 60,
+                  fontSize: "4rem",
                   margin: "0 1rem",
                 }}
               />
