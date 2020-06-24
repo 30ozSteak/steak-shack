@@ -6,15 +6,15 @@ import { useTransition } from "react-spring"
 
 import { FaShoppingCart } from "react-icons/fa"
 
+import Banner from "./Banner"
 import Cart from "./Cart/Cart"
 import Loader from "./Loader"
 import Nav from "./Nav"
 
 import "../style.scss"
 
-const Sidebar = ({ siteTitle }) => {
+const Header = ({ siteTitle }) => {
   const { isCartOpen, toggleCartOpen, checkout } = useContext(StoreContext)
-  debugger
 
   const transitions = useTransition(isCartOpen, null, {
     from: { transform: "translate3d(100%, 0, 0)" },
@@ -29,50 +29,35 @@ const Sidebar = ({ siteTitle }) => {
 
   return (
     <>
+      <Banner />
       <div
-        className="banner"
-        style={{
-          height: "3rem",
-          backgroundColor: "#ced3ca",
-          textAlign: "center",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        Follow{" "}
-        <a style={{ padding: "0 5px" }} href="https://www.twitter.com/iaaafm">
-          {" "}
-          @iaaafm{" "}
-        </a>{" "}
-        on Twitter for 10% off!
-      </div>
-      <Sidebar
-        className="level is-mobile"
         style={{
           padding: "20px 5%",
+          paddingTop: "150px",
           minHeight: "5rem",
+          backgroundColor: "white",
+          width: "225px",
+          height: "100vh",
+          position: "fixed",
           paddingLeft: "1.5%",
           margin: 0,
+          zIndex: 4,
         }}
       >
-        <div className="level-left">
+        <div>
           <Link to="/">
             <h1
               className="title"
               style={{
                 color: "black",
                 fontSize: "2rem",
-                marginRight: "5rem",
                 fontWeight: 500,
               }}
             >
-              Steak n' Shake
+              iaaafm.dev
             </h1>
           </Link>
           <Nav />
-        </div>
-        <div className="level-right">
           <div>
             <button
               className="button"
@@ -110,18 +95,18 @@ const Sidebar = ({ siteTitle }) => {
         {transitions.map(
           ({ item, key, props }) => item && <Cart key={key} style={props} />
         )}
-      </Sidebar>
+      </div>
       <Loader />
     </>
   )
 }
 
-Sidebar.propTypes = {
+Header.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Sidebar.defaultProps = {
+Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Sidebar
+export default Header

@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Sidebar from "./Sidebar"
+import Header from "./Header"
 import Footer from "./Footer"
 
 const Layout = ({ children }) => {
@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Sidebar siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title} />
       <div style={{ display: "flex", flexDirection: "column" }}>
         <main className="section" style={{ minHeight: "90vh", paddingTop: 0 }}>
           {children}
