@@ -34,6 +34,7 @@ const Header = ({ siteTitle }) => {
         style={{
           backgroundColor: "#fafafa",
           borderRight: "1px solid #f2f2f2",
+          display: "flex",
           height: "100vh",
           margin: 0,
           minHeight: "5rem",
@@ -41,7 +42,9 @@ const Header = ({ siteTitle }) => {
           paddingTop: "150px",
           position: "fixed",
           paddingLeft: "1.5%",
-          width: "225px",
+          width: "20%",
+          maxWidth: "360px",
+          minWidth: "240px",
           zIndex: 4,
         }}
       >
@@ -56,15 +59,6 @@ const Header = ({ siteTitle }) => {
               }}
               onClick={toggleCartOpen}
             >
-              <AiOutlineShopping
-                style={{
-                  color: "black",
-                  height: 60,
-                  width: 60,
-                  fontSize: "4rem",
-                  margin: "0 1rem",
-                }}
-              />
               {quantity > 0 && (
                 <div
                   style={{
@@ -72,12 +66,22 @@ const Header = ({ siteTitle }) => {
                     textAlign: "center",
                     height: 30,
                     width: 30,
-                    lineHeight: "30px",
+                    lineHeight: "40px",
+                    position: "absolute",
                   }}
                 >
-                  {quantity} / $ {shoppingCartTotal}
+                  {quantity}
+                  {/* / $ {shoppingCartTotal} */}
                 </div>
               )}
+              <AiOutlineShopping
+                style={{
+                  color: "black",
+                  height: 50,
+                  width: 50,
+                  margin: "0 1rem",
+                }}
+              />
             </button>
           </div>
           <Link to="/">

@@ -19,7 +19,7 @@ const Cart = ({ style }) => {
         zIndex: 100,
         position: "fixed",
         top: 0,
-        right: 0,
+        left: 0,
         width: "50%",
         height: "100%",
         background: "white",
@@ -32,7 +32,7 @@ const Cart = ({ style }) => {
         style={{
           background: "var(--red)",
           position: "absolute",
-          top: 10,
+          top: 50,
           right: 10,
         }}
         className="delete is-large"
