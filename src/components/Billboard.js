@@ -40,7 +40,7 @@ const Billboard = () => {
   } = product
 
   return (
-    <div>
+    <div style={{ height: "50vh", backgroundColor: "lightgray" }}>
       <div className="columns">
         <div className="column">
           <Image
