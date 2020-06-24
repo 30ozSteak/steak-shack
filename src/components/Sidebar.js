@@ -4,16 +4,15 @@ import { Link } from "gatsby"
 import { StoreContext } from "../context/StoreContext"
 import { useTransition } from "react-spring"
 
-import { AiOutlineShopping } from "react-icons/ai"
-
 import Banner from "./Banner"
 import Cart from "./Cart/Cart"
+import CartIcon from "./Cart/CartIcon"
 import Loader from "./Loader"
 import Nav from "./Nav"
 
 import "../style.scss"
 
-const Header = ({ siteTitle }) => {
+const Sidebar = ({ siteTitle }) => {
   const { isCartOpen, toggleCartOpen, checkout } = useContext(StoreContext)
 
   const transitions = useTransition(isCartOpen, null, {
@@ -49,41 +48,7 @@ const Header = ({ siteTitle }) => {
         }}
       >
         <div>
-          <div>
-            <button
-              className="button"
-              style={{
-                position: "relative",
-                background: "transparent",
-                border: "none",
-              }}
-              onClick={toggleCartOpen}
-            >
-              {quantity > 0 && (
-                <div
-                  style={{
-                    color: "black",
-                    textAlign: "center",
-                    height: 30,
-                    width: 30,
-                    lineHeight: "40px",
-                    position: "absolute",
-                  }}
-                >
-                  {quantity}
-                  {/* / $ {shoppingCartTotal} */}
-                </div>
-              )}
-              <AiOutlineShopping
-                style={{
-                  color: "black",
-                  height: 50,
-                  width: 50,
-                  margin: "0 1rem",
-                }}
-              />
-            </button>
-          </div>
+          <CartIcon quantity={quantity} toggleCartOpen={toggleCartOpen} />
           <Link to="/">
             <h1
               className="title"
@@ -108,12 +73,12 @@ const Header = ({ siteTitle }) => {
   )
 }
 
-Header.propTypes = {
+Sidebar.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+Sidebar.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default Sidebar

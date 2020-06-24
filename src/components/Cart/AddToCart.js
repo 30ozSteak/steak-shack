@@ -5,7 +5,7 @@ const AddToCart = ({ variantId }) => {
   const { addProductToCart } = useContext(StoreContext)
   return (
     <button
-      className="button is-primary is-rounded"
+      className="button is-primary is-square"
       onClick={() => addProductToCart(variantId)}
     >
       Add To Cart

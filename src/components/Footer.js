@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { AiOutlineTwitter } from "react-icons/ai"
+import { AiOutlineTwitter, AiOutlineGithub } from "react-icons/ai"
 
 const Footer = () => (
   <footer
@@ -55,15 +55,25 @@ const Footer = () => (
         iaaafm.dev
       </p>
       <p>
-        Nick Dambrosio {new Date().getFullYear()} <br />
+        Nick Dambrosio, {new Date().getFullYear()} <br />
         Built with
         <a href="https://www.gatsbyjs.org"> Gatsby</a>
         <br />
-        <a href="www.twitter.com/30ozsteak">
+        <a href="www.twitter.com/iaaafm">
           <AiOutlineTwitter
             style={{
               color: "black",
-              fontSize: 45,
+              fontSize: 30,
+              textAlign: "right",
+              marginRight: 0,
+            }}
+          />
+        </a>
+        <a href="www.github.com/30ozsteaak">
+          <AiOutlineGithub
+            style={{
+              color: "black",
+              fontSize: 30,
               textAlign: "right",
               marginRight: 0,
             }}
