@@ -7,7 +7,7 @@ const Footer = () => (
   <footer
     className="footer"
     style={{
-      padding: "4.5rem 5%",
+      padding: "100px 100px",
       lineHeight: "2rem",
       display: "flex",
       backgroundColor: "#fafafa",
@@ -57,28 +57,31 @@ const Footer = () => (
       <p>
         Nick Dambrosio, {new Date().getFullYear()} <br />
         Built with
-        <a href="https://www.gatsbyjs.org"> Gatsby</a>
+        <a href="https://www.gatsbyjs.org"> Gatsby</a>, Powered by{" "}
+        <a href="https://www.shopify.com">Shopify</a>
         <br />
-        <a href="www.twitter.com/iaaafm">
-          <AiOutlineTwitter
-            style={{
-              color: "black",
-              fontSize: 30,
-              textAlign: "right",
-              marginRight: 0,
-            }}
-          />
-        </a>
-        <a href="www.github.com/30ozsteaak">
-          <AiOutlineGithub
-            style={{
-              color: "black",
-              fontSize: 30,
-              textAlign: "right",
-              marginRight: 0,
-            }}
-          />
-        </a>
+        <div className="social-block" style={{ marginTop: "1rem" }}>
+          <a href="www.twitter.com/iaaafm">
+            <AiOutlineTwitter
+              style={{
+                color: "black",
+                fontSize: 30,
+                textAlign: "right",
+                marginRight: 0,
+              }}
+            />
+          </a>
+          <a href="www.github.com/30ozsteaak">
+            <AiOutlineGithub
+              style={{
+                color: "black",
+                fontSize: 30,
+                textAlign: "right",
+                marginRight: 0,
+              }}
+            />
+          </a>
+        </div>
       </p>
     </div>
   </footer>

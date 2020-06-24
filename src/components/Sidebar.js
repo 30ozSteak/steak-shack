@@ -33,7 +33,6 @@ const Sidebar = ({ siteTitle }) => {
         style={{
           backgroundColor: "#fafafa",
           borderRight: "1px solid #f2f2f2",
-          display: "flex",
           height: "100vh",
           margin: 0,
           minHeight: "5rem",
