@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { StoreContext } from "../context/StoreContext"
 import { useTransition } from "react-spring"
 
-import { FaShoppingCart } from "react-icons/fa"
+import { AiOutlineShopping } from "react-icons/ai"
 
 import Banner from "./Banner"
 import Cart from "./Cart/Cart"
@@ -45,19 +45,6 @@ const Header = ({ siteTitle }) => {
         }}
       >
         <div>
-          <Link to="/">
-            <h1
-              className="title"
-              style={{
-                color: "black",
-                fontSize: "2rem",
-                fontWeight: 500,
-              }}
-            >
-              iaaafm.dev
-            </h1>
-          </Link>
-          <Nav />
           <div>
             <button
               className="button"
@@ -68,7 +55,7 @@ const Header = ({ siteTitle }) => {
               }}
               onClick={toggleCartOpen}
             >
-              <FaShoppingCart
+              <AiOutlineShopping
                 style={{
                   color: "black",
                   height: 30,
@@ -91,6 +78,20 @@ const Header = ({ siteTitle }) => {
               )}
             </button>
           </div>
+          <Link to="/">
+            <h1
+              className="title"
+              style={{
+                color: "black",
+                fontSize: "2rem",
+                fontWeight: 500,
+                fontFamily: "Pacifico",
+              }}
+            >
+              iaaafm.dev
+            </h1>
+          </Link>
+          <Nav />
         </div>
         {transitions.map(
           ({ item, key, props }) => item && <Cart key={key} style={props} />
