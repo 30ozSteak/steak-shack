@@ -1,7 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+
 import Header from "./Header"
+import Newsletter from "./Newsletter"
 import Footer from "./Footer"
 
 const Layout = ({ children }) => {
@@ -19,26 +21,19 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <main className="section" style={{ minHeight: "90vh", paddingTop: 0 }}>
-          {children}
-        </main>
-        <div
+        <main
+          className="section"
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-            height: "15rem",
-            textAlign: "center",
-            backgroundColor: "#ced3ca",
+            minHeight: "100vh",
+            paddingTop: 0,
+            width: "80%",
+            marginLeft: "20%",
+            padding: 0,
           }}
         >
-          <h2 style={{ fontSize: "3rem" }}> Follow us on Twitter </h2>
-          <p>
-            Be the first to know when new products drop and get
-            behind-the-scenes content straight from Steak n Shake's founder.
-          </p>
-        </div>
+          {children}
+        </main>
+        <Newsletter />
         <Footer />
       </div>
     </>

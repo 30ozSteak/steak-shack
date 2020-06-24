@@ -10,7 +10,7 @@ const Footer = () => (
       padding: "4.5rem 5%",
       lineHeight: "2rem",
       display: "flex",
-      background: "#F7F7F7",
+      backgroundColor: "#fafafa",
       color: "black",
       justifyContent: "space-between",
     }}
@@ -46,12 +46,13 @@ const Footer = () => (
     <div style={{ textAlign: "right" }}>
       <p
         style={{
-          textTransform: "uppercase",
           fontSize: "2rem",
+          fontFamily: "Pacifico",
+          margin: "1rem 0",
           userSelect: "none",
         }}
       >
-        Steak n' Shake
+        iaaafm.dev
       </p>
       <p>
         Nick Dambrosio {new Date().getFullYear()} <br />

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Nicks Steak n Shake`,
-    description: `A place to buy steak and steak branded apparel.`,
+    title: `iaaafm.dev`,
+    description: `A place to buy steak branded apparel.`,
     author: `@iaaafm`,
   },
   plugins: [
