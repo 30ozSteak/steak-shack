@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import { StoreContext } from "../context/StoreContext"
 import { useTransition } from "react-spring"
 
-import Banner from "./Banner"
 import Cart from "./Cart/Cart"
 import CartIcon from "./Cart/CartIcon"
 import Loader from "./Loader"
@@ -28,7 +27,6 @@ const Sidebar = ({ siteTitle }) => {
 
   return (
     <>
-      <Banner />
       <div
         style={{
           backgroundColor: "#fafafa",
@@ -36,10 +34,9 @@ const Sidebar = ({ siteTitle }) => {
           height: "100vh",
           margin: 0,
           minHeight: "5rem",
-          padding: "20px 5%",
-          paddingTop: "150px",
+          padding: "2%",
+          paddingTop: "100px",
           position: "fixed",
-          paddingLeft: "1.5%",
           width: "20%",
           maxWidth: "360px",
           minWidth: "240px",
@@ -47,15 +44,17 @@ const Sidebar = ({ siteTitle }) => {
         }}
       >
         <div>
+          {/* {shoppingCartTotal} */}
           <CartIcon quantity={quantity} toggleCartOpen={toggleCartOpen} />
           <Link to="/">
             <h1
-              className="title"
+              className="site-title"
               style={{
                 color: "black",
                 fontSize: "2rem",
                 fontWeight: 500,
                 fontFamily: "Pacifico",
+                marginBottom: "60px",
               }}
             >
               iaaafm.dev

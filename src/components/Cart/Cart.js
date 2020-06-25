@@ -20,7 +20,7 @@ const Cart = ({ style }) => {
         position: "fixed",
         top: 0,
         left: 0,
-        width: "50%",
+        width: "35%",
         height: "100%",
         background: "white",
         padding: "40px 2%",

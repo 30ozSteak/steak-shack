@@ -10,15 +10,23 @@ const ProductsListingItem = ({ product }) => {
   } = product
   return (
     <article className="column is-one-quarter content">
-      <Link
-        to={`/product/${product.handle}`}
-        style={{ display: "block", marginBottom: "2rem" }}
-      >
+      <Link to={`/product/${product.handle}`} style={{ display: "block" }}>
         <Image fluid={firstImage.localFile.childImageSharp.fluid} />
-        <h3 className="title is-3">{product.title}</h3>
-        <p className="subtitle is-4">${firstVariant.price}</p>
+        <h3
+          style={{
+            textTransform: "uppercase",
+            fontSize: ".9rem",
+            letterSpacing: "-.5px",
+            marginBottom: 0,
+          }}
+        >
+          {product.title}
+        </h3>
+        <p style={{ fontSize: ".9rem", color: "black" }}>
+          ${firstVariant.price}
+        </p>
       </Link>
-      <AddToCart variantId={firstVariant.shopifyId} />
+      {/* <AddToCart variantId={firstVariant.shopifyId} /> */}
     </article>
   )
 }

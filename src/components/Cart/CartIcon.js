@@ -1,15 +1,16 @@
 import React from "react"
 import { AiOutlineShopping } from "react-icons/ai"
+import { GrShop } from "react-icons/gr"
 
 const CartIcon = ({ quantity, toggleCartOpen }) => {
   return (
-    <div>
+    <div style={{ textAlign: "right" }}>
       <button
-        className="button"
         style={{
           position: "relative",
           background: "transparent",
           border: "none",
+          cursor: "pointer",
         }}
         onClick={toggleCartOpen}
       >
@@ -18,9 +19,8 @@ const CartIcon = ({ quantity, toggleCartOpen }) => {
             style={{
               color: "black",
               textAlign: "center",
-              height: 30,
-              width: 30,
-              lineHeight: "40px",
+              left: "1.36rem",
+              lineHeight: "50px",
               position: "absolute",
             }}
           >
@@ -28,12 +28,11 @@ const CartIcon = ({ quantity, toggleCartOpen }) => {
             {/* / $ {shoppingCartTotal} */}
           </div>
         )}
-        <AiOutlineShopping
+        <GrShop
           style={{
             color: "black",
-            height: 50,
-            width: 50,
-            margin: "0 1rem",
+            height: 40,
+            width: 40,
           }}
         />
       </button>

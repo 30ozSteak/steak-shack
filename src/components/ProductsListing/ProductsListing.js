@@ -22,7 +22,7 @@ const PRODUCTS_LISTING_QUERY = graphql`
             id
             localFile {
               childImageSharp {
-                fluid(maxWidth: 400, maxHeight: 400) {
+                fluid(maxWidth: 400, maxHeight: 500) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -44,7 +44,7 @@ const ProductsListing = () => {
         query={PRODUCTS_LISTING_QUERY}
         render={({ products }) => {
           return (
-            <div className="columns is-multiline">
+            <div className="columns is-multiline" style={{ padding: "4rem" }}>
               {products.edges.map(({ node: product }) => (
                 <ProductsListingItem key={product.id} product={product} />
               ))}
