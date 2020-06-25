@@ -38,6 +38,7 @@ const Sidebar = ({ siteTitle }) => {
           paddingTop: "100px",
           position: "fixed",
           width: "360px",
+          zIndex: 50,
         }}
       >
         <div>

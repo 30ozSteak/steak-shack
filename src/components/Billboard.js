@@ -40,18 +40,19 @@ const Billboard = () => {
   } = product
 
   return (
-    <div style={{ backgroundColor: "lightgray", margin: 0, height: "100vh" }}>
+    <div
+      style={{
+        margin: 0,
+        height: "100vh",
+      }}
+    >
       <div>
         <div>
           <Image
             overlayColor="#04040454"
             fluid={firstImage.localFile.childImageSharp.fluid}
           ></Image>
-          <Link
-            className="button is-black"
-            style={{ backgroundColor: "black" }}
-            to={`/product/${product.handle}`}
-          >
+          <Link className="button is-dark" to={`/product/${product.handle}`}>
             Shop the Premium-Cut Collection
           </Link>
         </div>

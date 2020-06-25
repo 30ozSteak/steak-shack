@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react"
 import { animated } from "react-spring"
 import { StoreContext } from "../../context/StoreContext"
+import { RiCloseLine } from "react-icons/ri"
 
 const Cart = ({ style }) => {
   const {
@@ -16,30 +17,19 @@ const Cart = ({ style }) => {
   return (
     <animated.div
       style={{
-        zIndex: 3,
+        zIndex: 20,
         position: "fixed",
         top: 0,
         left: 0,
         width: "20%",
         height: "100%",
-        background: "white",
+        background: "#fafafa",
         padding: "40px 2%",
-        boxShadow: "var(--elevation-4)",
+        boxShadow: "2px 0 2px -1px #888",
         ...style,
       }}
     >
-      <button
-        style={{
-          background: "var(--red)",
-          position: "absolute",
-          top: 50,
-          right: 10,
-        }}
-        className="delete is-large"
-        onClick={toggleCartOpen}
-      >
-        Close Cart
-      </button>
+      <RiCloseLine onClick={toggleCartOpen} style={{ width: 40, height: 40 }} />
       <h3 className="title">Cart</h3>
       {checkout.lineItems.length > 0 ? (
         <>
@@ -64,7 +54,7 @@ const Cart = ({ style }) => {
                 <p className="subtitle is-5">Qty: {item.quantity}</p>
                 <button
                   onClick={() => removeProductFromCart(item.id)}
-                  className="is-small button is-danger is-outlined"
+                  className="is-small button is-dark is-outlined"
                 >
                   Remove
                 </button>
@@ -84,7 +74,7 @@ const Cart = ({ style }) => {
                   onClick={() =>
                     removeCoupon(checkout.discountApplications[0].code)
                   }
-                  className="is-small button is-danger is-outlined"
+                  className="is-small button is-dark is-outlined"
                 >
                   Remove
                 </button>
@@ -117,10 +107,7 @@ const Cart = ({ style }) => {
             Total: <h5 className="title">${checkout.totalPrice}</h5>
           </div>
           <div style={{ marginTop: "2rem" }}>
-            <a
-              href={checkout.webUrl}
-              className="button is-fullwidth is-success"
-            >
+            <a href={checkout.webUrl} className="button is-fullwidth is-dark">
               Checkout Now
             </a>
           </div>
