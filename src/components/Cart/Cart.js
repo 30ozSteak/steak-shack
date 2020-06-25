@@ -16,11 +16,11 @@ const Cart = ({ style }) => {
   return (
     <animated.div
       style={{
-        zIndex: 100,
+        zIndex: 3,
         position: "fixed",
         top: 0,
         left: 0,
-        width: "35%",
+        width: "20%",
         height: "100%",
         background: "white",
         padding: "40px 2%",

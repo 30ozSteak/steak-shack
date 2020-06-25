@@ -1,0 +1,3 @@
+.button.is-square.is-dark:hover {
+  filter: brightness(1.5);
+}

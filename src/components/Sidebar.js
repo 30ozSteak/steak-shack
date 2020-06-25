@@ -15,9 +15,9 @@ const Sidebar = ({ siteTitle }) => {
   const { isCartOpen, toggleCartOpen, checkout } = useContext(StoreContext)
 
   const transitions = useTransition(isCartOpen, null, {
-    from: { transform: "translate3d(100%, 0, 0)" },
-    enter: { transform: "translate3d(0, 0, 0)" },
-    leave: { transform: "translate3d(100%, 0, 0)" },
+    from: { transform: "translate3d(0%, 0, 0)" },
+    enter: { transform: "translate3d(90%, 0, 0)" },
+    leave: { transform: "translate3d(0%, 0, 0)" },
   })
   const quantity = checkout.lineItems.reduce((total, item) => {
     return total + item.quantity
@@ -37,10 +37,7 @@ const Sidebar = ({ siteTitle }) => {
           padding: "2%",
           paddingTop: "100px",
           position: "fixed",
-          width: "20%",
-          maxWidth: "360px",
-          minWidth: "240px",
-          zIndex: 4,
+          width: "360px",
         }}
       >
         <div>
