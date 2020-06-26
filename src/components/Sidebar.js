@@ -16,7 +16,7 @@ const Sidebar = ({ siteTitle }) => {
 
   const transitions = useTransition(isCartOpen, null, {
     from: { transform: "translate3d(0%, 0, 0)" },
-    enter: { transform: "translate3d(90%, 0, 0)" },
+    enter: { transform: "translate3d(100%, 0, 0)" },
     leave: { transform: "translate3d(0%, 0, 0)" },
   })
   const quantity = checkout.lineItems.reduce((total, item) => {

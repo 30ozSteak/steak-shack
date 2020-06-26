@@ -17,20 +17,32 @@ const Cart = ({ style }) => {
   return (
     <animated.div
       style={{
-        zIndex: 20,
         position: "fixed",
         top: 0,
         left: 0,
-        width: "20%",
+        width: "360px",
         height: "100%",
         background: "#fafafa",
         padding: "40px 2%",
         boxShadow: "2px 0 2px -1px #888",
+        overflow: "scroll",
+        zIndex: 65,
         ...style,
       }}
     >
-      <RiCloseLine onClick={toggleCartOpen} style={{ width: 40, height: 40 }} />
-      <h3 className="title">Cart</h3>
+      <RiCloseLine
+        onClick={toggleCartOpen}
+        style={{
+          width: 40,
+          height: 40,
+          position: "absolute",
+          marginTop: 25,
+          right: 25,
+        }}
+      />
+      <h5 className="title" style={{ marginTop: "4rem" }}>
+        Cart
+      </h5>
       {checkout.lineItems.length > 0 ? (
         <>
           {checkout.lineItems.map(item => (
@@ -41,7 +53,7 @@ const Cart = ({ style }) => {
               <div
                 style={{
                   width: 60,
-                  height: 60,
+                  height: 90,
                   overflow: "hidden",
                   marginRight: 10,
                 }}
@@ -49,15 +61,18 @@ const Cart = ({ style }) => {
                 <img src={item.variant.image.src} alt="" />
               </div>
               <div>
-                <h4 className="title is-4">{item.title}</h4>
-                <p className="subtitle is-5">${item.variant.price}</p>
-                <p className="subtitle is-5">Qty: {item.quantity}</p>
-                <button
-                  onClick={() => removeProductFromCart(item.id)}
-                  className="is-small button is-dark is-outlined"
-                >
-                  Remove
-                </button>
+                <h4 className="title is-6">{item.title}</h4>
+                <p className="subtitle is-6">${item.variant.price}</p>
+
+                <div style={{ display: "flex" }}>
+                  <p className="subtitle is-6">Qty: {item.quantity}</p>
+                  <button
+                    onClick={() => removeProductFromCart(item.id)}
+                    className="is-small button is-dark is-outlined"
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
             </div>
           ))}

@@ -1,3 +1,23 @@
 .button.is-dark:hover {
   filter: brightness(1.5);
 }
+
+.cart-icon-container {
+  text-align: right;
+  display: flex;
+  line-height: 36px;
+  justify-content: flex-end;
+}
+
+.cart-icon-container button {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-icon-container svg {
+  color: black;
+  height: 2rem;
+  width: 2rem;
+}
