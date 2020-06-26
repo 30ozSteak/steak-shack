@@ -1,3 +1,7 @@
+* {
+  font-family: "STEAK";
+}
+
 .sidebar {
   background-color: #fafafa;
   border-right: 1px solid #f2f2f2;
@@ -15,13 +19,18 @@
   color: black;
   font-size: 2rem;
   font-weight: 500;
-  font-family: "Pacifico";
+  font-family: "STEAK";
   margin-bottom: 60px;
 }
 
 nav li {
   list-style-type: none;
   margin: 1rem 0;
+}
+
+@font-face {
+  font-family: STEAK;
+  src: url(../../Fonts/TTCommons-Medium.woff) format("woff2");
 }
 
 nav a {

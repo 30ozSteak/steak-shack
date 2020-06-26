@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import Banner from "../components/Banner/Banner"
 import Billboard from "../components/Billboard"
 import VideoBlock from "../components/VideoBlock"
+import "../Fonts/TTCommons-Medium.woff"
 import ProductsListing from "../components/ProductsListing/ProductsListing"
 
 const IndexPage = () => (
