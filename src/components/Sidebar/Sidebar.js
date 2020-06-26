@@ -36,7 +36,7 @@ const Sidebar = ({ siteTitle }) => {
             toggleCartOpen={toggleCartOpen}
           />
           <Link to="/">
-            <h1>iaaafm.dev</h1>
+            <h1>{siteTitle}</h1>
           </Link>
           <Nav />
         </div>
