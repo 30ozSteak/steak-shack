@@ -9,6 +9,8 @@ const ProductCategoriesTemplate = ({ data }) => {
   return (
     <Layout>
       <div>
+        This is where I can put a banner for the type category the user has
+        clicked into
         <h2 className="title">{shopifyCollection.title}</h2>
         <div className="columns is-multiline">
           {shopifyCollection.products.map(product => (

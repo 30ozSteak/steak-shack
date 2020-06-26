@@ -12,6 +12,7 @@ const ProductDetailTemplate = ({ data }) => {
   } = product
   return (
     <Layout>
+      This is where I can put the specific product details
       <div className="columns">
         <div className="column">
           <Image fluid={firstImage.localFile.childImageSharp.fluid} />
