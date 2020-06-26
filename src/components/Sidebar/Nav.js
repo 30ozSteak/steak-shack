@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import "../components/Sidebar/Sidebar.scss"
+import "./Sidebar.scss"
 
 const Nav = () => {
   const { allShopifyCollection } = useStaticQuery(

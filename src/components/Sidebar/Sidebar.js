@@ -7,7 +7,7 @@ import { useTransition } from "react-spring"
 import Cart from "../Cart/Cart"
 import CartIcon from "../Cart/CartIcon"
 import Loader from "../Loader"
-import Nav from "../Nav"
+import Nav from "../../components/Sidebar/Nav"
 
 import "./Sidebar.scss"
 import "../../style.scss"

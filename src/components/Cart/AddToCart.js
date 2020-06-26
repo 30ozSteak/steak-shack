@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { StoreContext } from "../../context/StoreContext"
-import "./Cart.css"
+import "./Cart.scss"
 
 const AddToCart = ({ variantId }) => {
   const { addProductToCart } = useContext(StoreContext)

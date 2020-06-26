@@ -1,0 +1,24 @@
+.footer-links a {
+  color: #363636;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.footer-links a:hover {
+  color: black;
+}
+
+.footer-links a::after {
+  background-color: black;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 0%;
+}
+
+.footer-links a:hover:after {
+  width: 100%;
+}

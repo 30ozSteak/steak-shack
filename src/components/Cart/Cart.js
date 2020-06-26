@@ -22,17 +22,17 @@ const Cart = ({ style, quantity }) => {
         ...style,
       }}
     >
-      {/* <RiCloseLine onClick={toggleCartOpen} /> */}
-      <h5
-        style={{
-          margin: "2rem 0",
-          textTransform: "uppercase",
-          letterSpacing: "-.5px",
-        }}
-      >
-        You have <span style={{ fontWeight: 900 }}>{quantity}</span> items in
-        your cart
-      </h5>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <h5>
+          You have <span>{quantity}</span> items in your cart
+        </h5>
+        <button className="button">
+          <RiCloseLine
+            onClick={toggleCartOpen}
+            style={{ width: 25, height: 30 }}
+          />
+        </button>
+      </div>
       {checkout.lineItems.length > 0 ? (
         <>
           {checkout.lineItems.map(item => (

@@ -23,7 +23,7 @@ const Billboard = () => {
             id
             localFile {
               childImageSharp {
-                fluid(maxWidth: 1920, maxHeight: 1080) {
+                fluid(maxWidth: 1920, maxHeight: 1280) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -41,10 +41,9 @@ const Billboard = () => {
 
   return (
     <div
-      style={{
-        margin: 0,
-        height: "100vh",
-      }}
+    // style={{
+    //   height: "1280px",
+    // }}
     >
       <div>
         <div>
@@ -52,12 +51,15 @@ const Billboard = () => {
             overlayColor="#04040454"
             fluid={firstImage.localFile.childImageSharp.fluid}
           ></Image>
-          <Link className="button is-dark" to={`/product/${product.handle}`}>
+          <Link
+            style={{ position: "relative", left: "5rem", bottom: "5rem" }}
+            className="button is-dark"
+            to={`/product/${product.handle}`}
+          >
             Shop the Premium-Cut Collection
           </Link>
         </div>
         <div>
-          <h2></h2>
           {/* <h3 className="title">{product.title}</h3> */}
           {/* <p className="subtitle is-4">${firstVariant.price}</p> */}
         </div>

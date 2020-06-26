@@ -26,11 +26,11 @@ nav li {
 
 nav a {
   color: #363636;
-  text-transform: uppercase;
-  padding-bottom: 5px;
   font-size: 1rem;
   font-weight: 400;
+  padding-bottom: 5px;
   position: relative;
+  text-transform: uppercase;
   width: 100%;
 }
 
@@ -39,14 +39,14 @@ nav a:hover {
 }
 
 .nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 1px;
-  transition: 0.2s;
   background-color: black;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 0%;
 }
 
 .nav a:hover:after {
@@ -54,14 +54,14 @@ nav a:hover {
 }
 
 .cart-open {
-  z-index: 10 !important;
   background: #fafafa;
   box-shadow: 2px 0 2px -1px #888;
-  overflow: scroll;
   height: 100%;
   left: 0;
-  padding: 40px 2%;
+  overflow: scroll;
   position: fixed;
+  padding: 40px 2%;
   top: 0;
   width: 360px;
+  z-index: 10 !important;
 }
