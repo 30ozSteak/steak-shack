@@ -19,10 +19,13 @@ const Cart = ({ style, quantity }) => {
     <animated.div
       className="cart-open"
       style={{
+        zIndex: 2,
         ...style,
       }}
     >
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div
+        style={{ display: "flex", alignItems: "center", position: "relative" }}
+      >
         <h5>
           You have <span>{quantity}</span> items in your cart
         </h5>

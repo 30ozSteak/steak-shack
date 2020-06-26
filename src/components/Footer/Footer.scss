@@ -42,3 +42,19 @@
 .footer-links a:hover:after {
   width: 100%;
 }
+
+.social-block {
+  margin-top: 1rem;
+}
+
+.social-block svg {
+  color: #363636;
+  font-size: 2rem;
+  margin-right: 1rem;
+  text-align: right;
+  transition: 0.2s;
+}
+
+.social-block svg:hover {
+  color: black;
+}

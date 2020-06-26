@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 
 import { AiOutlineTwitter, AiOutlineGithub } from "react-icons/ai"
 
+// I should do a static query to my own gatsby config and pull most of this out
+
 import "./Footer.scss"
 
 const Footer = ({ siteTitle }) => (
@@ -40,26 +42,12 @@ const Footer = ({ siteTitle }) => (
         <a href="https://www.gatsbyjs.org"> Gatsby</a>, Powered by{" "}
         <a href="https://www.shopify.com">Shopify</a>
         <br />
-        <div className="social-block" style={{ marginTop: "1rem" }}>
+        <div className="social-block">
           <a href="www.twitter.com/iaaafm">
-            <AiOutlineTwitter
-              style={{
-                color: "black",
-                fontSize: 30,
-                textAlign: "right",
-                marginRight: 0,
-              }}
-            />
+            <AiOutlineTwitter />
           </a>
-          <a href="www.github.com/30ozsteaak">
-            <AiOutlineGithub
-              style={{
-                color: "black",
-                fontSize: 30,
-                textAlign: "right",
-                marginRight: 0,
-              }}
-            />
+          <a href="www.github.com/30ozsteak">
+            <AiOutlineGithub />
           </a>
         </div>
       </p>
