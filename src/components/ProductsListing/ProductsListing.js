@@ -37,9 +37,6 @@ const PRODUCTS_LISTING_QUERY = graphql`
 const ProductsListing = () => {
   return (
     <div>
-      <h2 style={{ margin: "1rem" }} className="title">
-        All Products
-      </h2>
       <StaticQuery
         query={PRODUCTS_LISTING_QUERY}
         render={({ products }) => {
