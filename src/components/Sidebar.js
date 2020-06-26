@@ -42,8 +42,11 @@ const Sidebar = ({ siteTitle }) => {
         }}
       >
         <div>
-          {/* {shoppingCartTotal} */}
-          <CartIcon quantity={quantity} toggleCartOpen={toggleCartOpen} />
+          <CartIcon
+            shoppingCartTotal={shoppingCartTotal}
+            quantity={quantity}
+            toggleCartOpen={toggleCartOpen}
+          />
           <Link to="/">
             <h1
               className="site-title"
