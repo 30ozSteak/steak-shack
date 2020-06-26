@@ -3,7 +3,7 @@ import { animated } from "react-spring"
 import { StoreContext } from "../../context/StoreContext"
 import { RiCloseLine } from "react-icons/ri"
 
-const Cart = ({ style }) => {
+const Cart = ({ style, quantity }) => {
   const {
     checkout,
     toggleCartOpen,
@@ -16,32 +16,31 @@ const Cart = ({ style }) => {
 
   return (
     <animated.div
+      className="sidebar"
       style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "360px",
-        height: "100%",
         background: "#fafafa",
-        padding: "40px 2%",
         boxShadow: "2px 0 2px -1px #888",
         overflow: "scroll",
-        zIndex: 65,
+        height: "100%",
+        left: 0,
+        padding: "40px 2%",
+        position: "fixed",
+        top: 0,
+        width: "360px",
+        zIndex: "95",
         ...style,
       }}
     >
-      <RiCloseLine
-        onClick={toggleCartOpen}
+      {/* <RiCloseLine onClick={toggleCartOpen} /> */}
+      <h5
         style={{
-          width: 40,
-          height: 40,
-          position: "absolute",
-          marginTop: 25,
-          right: 25,
+          margin: "2rem 0",
+          textTransform: "uppercase",
+          letterSpacing: "-.5px",
         }}
-      />
-      <h5 className="title" style={{ marginTop: "4rem" }}>
-        Cart
+      >
+        You have <span style={{ fontWeight: 900 }}>{quantity}</span> items in
+        your cart
       </h5>
       {checkout.lineItems.length > 0 ? (
         <>
@@ -56,6 +55,8 @@ const Cart = ({ style }) => {
                   height: 90,
                   overflow: "hidden",
                   marginRight: 10,
+                  maxHeight: "50vh",
+                  overflow: "scroll",
                 }}
               >
                 <img src={item.variant.image.src} alt="" />
@@ -65,7 +66,9 @@ const Cart = ({ style }) => {
                 <p className="subtitle is-6">${item.variant.price}</p>
 
                 <div style={{ display: "flex" }}>
-                  <p className="subtitle is-6">Qty: {item.quantity}</p>
+                  <p className="subtitle is-6" style={{ marginRight: "4rem" }}>
+                    Qty: {item.quantity}{" "}
+                  </p>
                   <button
                     onClick={() => removeProductFromCart(item.id)}
                     className="is-small button is-dark is-outlined"

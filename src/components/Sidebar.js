@@ -61,7 +61,8 @@ const Sidebar = ({ siteTitle }) => {
           <Nav />
         </div>
         {transitions.map(
-          ({ item, key, props }) => item && <Cart key={key} style={props} />
+          ({ item, key, props }) =>
+            item && <Cart quantity={quantity} key={key} style={props} />
         )}
       </div>
       <Loader />

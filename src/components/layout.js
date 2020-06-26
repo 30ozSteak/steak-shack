@@ -26,8 +26,7 @@ const Layout = ({ children }) => {
           style={{
             minHeight: "100vh",
             paddingTop: 0,
-            width: "80%",
-            marginLeft: "20%",
+            marginLeft: "360px",
             padding: 0,
           }}
         >

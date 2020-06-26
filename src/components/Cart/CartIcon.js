@@ -9,7 +9,7 @@ const CartIcon = ({ quantity, toggleCartOpen, shoppingCartTotal }) => {
           {quantity}/ $ {shoppingCartTotal}
         </div>
       )}
-      <button style={{}} onClick={toggleCartOpen}>
+      <button onClick={toggleCartOpen}>
         <GrShop />
       </button>
     </div>

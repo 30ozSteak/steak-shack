@@ -6,7 +6,9 @@
   text-align: right;
   display: flex;
   line-height: 36px;
+  box-sizing: border-box;
   justify-content: flex-end;
+  border: 2px solid transparent;
 }
 
 .cart-icon-container button {
@@ -20,4 +22,10 @@
   color: black;
   height: 2rem;
   width: 2rem;
+  transition: 0.2s;
+}
+
+.cart-icon-container:hover svg {
+  transform: scale(1.1);
+  position: relative;
 }
