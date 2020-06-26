@@ -17,18 +17,8 @@ const Cart = ({ style, quantity }) => {
 
   return (
     <animated.div
-      className="sidebar"
+      className="cart-open"
       style={{
-        background: "#fafafa",
-        boxShadow: "2px 0 2px -1px #888",
-        overflow: "scroll",
-        height: "100%",
-        left: 0,
-        padding: "40px 2%",
-        position: "fixed",
-        top: 0,
-        width: "360px",
-        zIndex: "95",
         ...style,
       }}
     >

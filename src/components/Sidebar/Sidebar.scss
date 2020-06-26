@@ -8,7 +8,7 @@
   padding-top: 100px;
   position: fixed;
   width: 360px;
-  z-index: 50;
+  z-index: 50 !important;
 }
 
 .sidebar h1 {
@@ -29,7 +29,7 @@ nav a {
   text-transform: uppercase;
   padding-bottom: 5px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   width: 100%;
 }
@@ -44,11 +44,24 @@ nav a:hover {
   left: 0;
   bottom: 0;
   width: 0%;
-  height: 2px;
+  height: 1px;
   transition: 0.2s;
   background-color: black;
 }
 
 .nav a:hover:after {
   width: 100%;
+}
+
+.cart-open {
+  z-index: 10 !important;
+  background: #fafafa;
+  box-shadow: 2px 0 2px -1px #888;
+  overflow: scroll;
+  height: 100%;
+  left: 0;
+  padding: 40px 2%;
+  position: fixed;
+  top: 0;
+  width: 360px;
 }
