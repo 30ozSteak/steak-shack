@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
           {children}
         </main>
         <Newsletter />
-        <Footer />
+        <Footer siteTitle={data.site.siteMetadata.title} />
       </div>
     </>
   )

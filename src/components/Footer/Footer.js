@@ -5,25 +5,11 @@ import { AiOutlineTwitter, AiOutlineGithub } from "react-icons/ai"
 
 import "./Footer.scss"
 
-const Footer = () => (
-  <footer
-    className="footer"
-    style={{
-      padding: "100px 100px",
-      marginLeft: "288px",
-      lineHeight: "2rem",
-      display: "flex",
-      backgroundColor: "#fafafa",
-      color: "black",
-      justifyContent: "space-between",
-    }}
-  >
-    <div
-      className="left-columns"
-      style={{ display: "flex", margin: "auto 0", color: "black" }}
-    >
+const Footer = ({ siteTitle }) => (
+  <footer className="footer">
+    <div className="left-columns">
       <ul className="footer-links">
-        <li style={{ fontSize: "1rem" }}>Customer Service</li>
+        <li>Customer Service</li>
         <li>
           <Link to="../pages/faq.js">Help / FAQ</Link>
         </li>
@@ -34,7 +20,7 @@ const Footer = () => (
           <Link to="../pages/faq.js">Contact Us</Link>
         </li>
       </ul>
-      <ul className="footer-links" style={{ marginLeft: "5rem" }}>
+      <ul className="footer-links">
         <li>
           <Link to="../pages/faq.js">Shop</Link>
         </li>
@@ -46,17 +32,8 @@ const Footer = () => (
         </li>
       </ul>
     </div>
-    <div style={{ textAlign: "right" }}>
-      <p
-        style={{
-          fontSize: "2rem",
-          fontFamily: "Pacifico",
-          margin: "1rem 0",
-          userSelect: "none",
-        }}
-      >
-        iaaafm.dev
-      </p>
+    <div>
+      <p>{siteTitle}</p>
       <p>
         Nick Dambrosio, {new Date().getFullYear()} <br />
         Built with

@@ -1,3 +1,23 @@
+.footer {
+  padding: 100px 100px;
+  margin-left: 288px;
+  line-height: 2rem;
+  display: flex;
+  background-color: #fafafa;
+  color: black;
+  justify-content: space-between;
+}
+
+.footer .left-columns {
+  display: flex;
+  margin: auto 0;
+  color: black;
+}
+
+.footer-links {
+  padding-right: 5rem;
+}
+
 .footer-links a {
   color: #363636;
   position: relative;

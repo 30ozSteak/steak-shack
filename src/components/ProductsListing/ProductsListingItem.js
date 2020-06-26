@@ -16,7 +16,6 @@ const ProductsListingItem = ({ product }) => {
           style={{
             textTransform: "uppercase",
             fontSize: ".9rem",
-            letterSpacing: "-.5px",
             marginBottom: 0,
           }}
         >
