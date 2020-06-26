@@ -1,13 +1,13 @@
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { StoreContext } from "../context/StoreContext"
+import { StoreContext } from "../../context/StoreContext"
 import { useTransition } from "react-spring"
 
-import Cart from "./Cart/Cart"
-import CartIcon from "./Cart/CartIcon"
-import Loader from "./Loader"
-import Nav from "./Nav"
+import Cart from "../Cart/Cart"
+import CartIcon from "../Cart/CartIcon"
+import Loader from "../Loader"
+import Nav from "../Nav"
 
 import "../style.scss"
 
@@ -27,20 +27,7 @@ const Sidebar = ({ siteTitle }) => {
 
   return (
     <>
-      <div
-        style={{
-          backgroundColor: "#fafafa",
-          borderRight: "1px solid #f2f2f2",
-          height: "100vh",
-          margin: 0,
-          minHeight: "5rem",
-          padding: "2%",
-          paddingTop: "100px",
-          position: "fixed",
-          width: "360px",
-          zIndex: 50,
-        }}
-      >
+      <div className="sidebar">
         <div>
           <CartIcon
             shoppingCartTotal={shoppingCartTotal}
@@ -48,18 +35,7 @@ const Sidebar = ({ siteTitle }) => {
             toggleCartOpen={toggleCartOpen}
           />
           <Link to="/">
-            <h1
-              className="site-title"
-              style={{
-                color: "black",
-                fontSize: "2rem",
-                fontWeight: 500,
-                fontFamily: "Pacifico",
-                marginBottom: "60px",
-              }}
-            >
-              iaaafm.dev
-            </h1>
+            <h1 className="site-title">iaaafm.dev</h1>
           </Link>
           <Nav />
         </div>
