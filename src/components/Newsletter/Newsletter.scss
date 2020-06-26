@@ -1,24 +1,24 @@
 .newsletter-container {
+  background-color: #ebebeb;
   color: black;
   padding: 10vw 10%;
   margin-left: 288px;
   text-align: left;
-  background-color: #ebebeb;
 }
 
 .newsletter-container h2 {
   font-size: 1.2rem;
-  text-transform: uppercase;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .newsletter-container input {
-  margin-bottom: 10px;
-  color: black;
-  width: 100%;
-  height: 55px;
   background: transparent;
   border: none;
   border-bottom: 1px solid black;
+  color: black;
+  height: 55px;
+  margin-bottom: 10px;
   outline: none;
+  width: 100%;
 }
