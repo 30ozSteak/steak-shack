@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "gatsby-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import { BsArrowRight } from "react-icons/bs"
 
 const Billboard = () => {
   const { shopifyProduct: product } = useStaticQuery(
@@ -40,11 +41,7 @@ const Billboard = () => {
   } = product
 
   return (
-    <div
-    // style={{
-    //   height: "1280px",
-    // }}
-    >
+    <div>
       <div>
         <div>
           <Image
@@ -52,11 +49,18 @@ const Billboard = () => {
             fluid={firstImage.localFile.childImageSharp.fluid}
           ></Image>
           <Link
-            style={{ position: "relative", left: "5rem", bottom: "5rem" }}
+            style={{
+              position: "relative",
+              left: "5rem",
+              bottom: "5rem",
+              color: "white",
+              padding: "1rem",
+            }}
             className="button is-dark"
             to={`/product/${product.handle}`}
           >
             Shop the Premium-Cut Collection
+            <BsArrowRight style={{ marginLeft: "10px" }} />
           </Link>
         </div>
         <div>
