@@ -9,7 +9,8 @@ import CartIcon from "../Cart/CartIcon"
 import Loader from "../Loader"
 import Nav from "../Nav"
 
-import "../style.scss"
+import "./Sidebar.scss"
+import "../../style.scss"
 
 const Sidebar = ({ siteTitle }) => {
   const { isCartOpen, toggleCartOpen, checkout } = useContext(StoreContext)
@@ -35,7 +36,7 @@ const Sidebar = ({ siteTitle }) => {
             toggleCartOpen={toggleCartOpen}
           />
           <Link to="/">
-            <h1 className="site-title">iaaafm.dev</h1>
+            <h1>iaaafm.dev</h1>
           </Link>
           <Nav />
         </div>
