@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Sidebar from "../components/Sidebar/Sidebar"
-import Newsletter from "./Newsletter"
+import Newsletter from "./Newsletter/Newsletter"
 import Footer from "../components/Footer/Footer"
 
 const Layout = ({ children }) => {
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
           style={{
             minHeight: "100vh",
             paddingTop: 0,
-            marginLeft: "360px",
+            marginLeft: "288px",
             padding: 0,
           }}
         >

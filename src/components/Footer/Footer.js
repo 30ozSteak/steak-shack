@@ -10,7 +10,7 @@ const Footer = () => (
     className="footer"
     style={{
       padding: "100px 100px",
-      marginLeft: "360px",
+      marginLeft: "288px",
       lineHeight: "2rem",
       display: "flex",
       backgroundColor: "#fafafa",
