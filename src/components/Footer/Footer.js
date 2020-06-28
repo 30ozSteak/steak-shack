@@ -1,7 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { AiOutlineTwitter, AiOutlineGithub } from "react-icons/ai"
+import {
+  AiOutlineTwitter,
+  AiOutlineGithub,
+  AiOutlineCopyright,
+} from "react-icons/ai"
 
 // I should do a static query to my own gatsby config and pull most of this out
 
@@ -35,9 +39,8 @@ const Footer = ({ siteTitle }) => (
       </ul>
     </div>
     <div>
-      <p>{siteTitle}</p>
       <p>
-        Nick Dambrosio, {new Date().getFullYear()} <br />
+        <AiOutlineCopyright /> {new Date().getFullYear()} {siteTitle} <br />
         Built with
         <a href="https://www.gatsbyjs.org"> Gatsby</a>, Powered by{" "}
         <a href="https://www.shopify.com">Shopify</a>

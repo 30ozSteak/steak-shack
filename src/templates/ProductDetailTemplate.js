@@ -10,14 +10,14 @@ const ProductDetailTemplate = ({ data }) => {
     images: [firstImage],
     variants: [firstVariant],
   } = product
+
   return (
     <Layout>
-      This is where I can put the specific product details
-      <div className="columns">
+      <div style={{ padding: "5rem", display: "flex" }}>
         <div className="column">
           <Image fluid={firstImage.localFile.childImageSharp.fluid} />
         </div>
-        <div className="column">
+        <div style={{ margin: "3rem" }}>
           <h1 className="title">{product.title}</h1>
           <p className="subtitle is-4">${firstVariant.price}</p>
           <p>{product.description}</p>
@@ -50,7 +50,7 @@ export const query = graphql`
         id
         localFile {
           childImageSharp {
-            fluid(maxWidth: 400, maxHeight: 400) {
+            fluid(maxWidth: 700, maxHeight: 700) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

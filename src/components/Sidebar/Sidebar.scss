@@ -61,16 +61,3 @@ nav a:hover {
 .nav a:hover:after {
   width: 100%;
 }
-
-.cart-open {
-  background: #fafafa;
-  box-shadow: 2px 0 2px -1px #888;
-  height: 100%;
-  left: 0;
-  overflow: scroll;
-  position: fixed;
-  padding: 40px 2%;
-  top: 0;
-  width: 360px;
-  z-index: 10 !important;
-}
