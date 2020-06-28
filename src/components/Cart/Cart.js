@@ -35,16 +35,7 @@ const Cart = ({ style, quantity }) => {
               key={item.id}
               style={{ display: "flex", marginBottom: "2rem" }}
             >
-              <div
-                style={{
-                  width: 60,
-                  height: 90,
-                  overflow: "hidden",
-                  marginRight: 10,
-                  maxHeight: "50vh",
-                  overflow: "scroll",
-                }}
-              >
+              <div className="products-cart-container">
                 <img src={item.variant.image.src} alt="" />
               </div>
               <div>
@@ -66,14 +57,14 @@ const Cart = ({ style, quantity }) => {
             </div>
           ))}
 
-          <div>
+          <div className="coupon-cart-container">
             {checkout.discountApplications.length > 0 ? (
               <p>
                 Coupon:
-                <h5 className="title">
+                <p>
                   {checkout.discountApplications[0].code} -{" "}
                   {checkout.discountApplications[0].value.percentage}% off
-                </h5>
+                </p>
                 <button
                   onClick={() =>
                     removeCoupon(checkout.discountApplications[0].code)
@@ -102,13 +93,15 @@ const Cart = ({ style, quantity }) => {
                     type="text"
                   />
                 </div>
-                <button className="button">Add Coupon</button>
+                <button className="button is-dark is-outlined">
+                  Add Coupon
+                </button>
               </form>
             )}
           </div>
           <hr />
           <div>
-            Total: <h5 className="title">${checkout.totalPrice}</h5>
+            Total: <p className="title">${checkout.totalPrice}</p>
           </div>
           <div style={{ marginTop: "2rem" }}>
             <a href={checkout.webUrl} className="button is-fullwidth is-dark">

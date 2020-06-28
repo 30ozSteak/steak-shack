@@ -72,3 +72,12 @@ h5 span {
   color: black;
   transform: rotate(90deg);
 }
+
+.products-cart-container {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  margin-right: 10px;
+  max-height: 50vh;
+  overflow: scroll;
+}
