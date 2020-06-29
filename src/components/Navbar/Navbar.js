@@ -29,12 +29,10 @@ const Navbar = ({ siteTitle }) => {
   return (
     <>
       <div className="navbar">
-        <div>
-          <Link to="/">
-            <h1>{siteTitle}</h1>
-          </Link>
-          <Nav />
-        </div>
+        <Link to="/">
+          <h1>{siteTitle}</h1>
+        </Link>
+        <Nav />
         {transitions.map(
           ({ item, key, props }) =>
             item && <Cart quantity={quantity} key={key} style={props} />
