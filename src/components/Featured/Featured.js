@@ -24,7 +24,7 @@ const Featured = () => {
             id
             localFile {
               childImageSharp {
-                fluid(maxWidth: 600, maxHeight: 500) {
+                fluid(maxWidth: 1920, maxHeight: 1080) {
                   ...GatsbyImageSharpFluid_withWebp
                   ...GatsbyImageSharpFluidLimitPresentationSize
                 }

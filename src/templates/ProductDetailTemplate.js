@@ -13,14 +13,22 @@ const ProductDetailTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div style={{ padding: "5rem", display: "flex" }}>
+      <div
+        style={{
+          display: "flex",
+          margin: "auto",
+          minHeight: "50vh",
+        }}
+      >
         <div className="column">
           <Image fluid={firstImage.localFile.childImageSharp.fluid} />
         </div>
         <div style={{ margin: "3rem" }}>
           <h1 className="title">{product.title}</h1>
           <p className="subtitle is-4">${firstVariant.price}</p>
-          <p>{product.description}</p>
+          <p style={{ maxWidth: "500px", marginBottom: "2rem" }}>
+            {product.description}
+          </p>
           <AddToCart variantId={firstVariant.shopifyId} />
         </div>
       </div>
@@ -50,7 +58,7 @@ export const query = graphql`
         id
         localFile {
           childImageSharp {
-            fluid(maxWidth: 700, maxHeight: 700) {
+            fluid(maxWidth: 300, maxHeight: 400) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

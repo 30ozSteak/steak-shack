@@ -41,7 +41,7 @@ const ProductsListing = () => {
         query={PRODUCTS_LISTING_QUERY}
         render={({ products }) => {
           return (
-            <div className="columns is-multiline" style={{ padding: "4rem" }}>
+            <div className="columns is-multiline" style={{ padding: "1rem" }}>
               {products.edges.map(({ node: product }) => (
                 <ProductsListingItem key={product.id} product={product} />
               ))}
