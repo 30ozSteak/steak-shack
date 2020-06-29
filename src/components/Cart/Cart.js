@@ -10,7 +10,6 @@ const Cart = ({ style, quantity }) => {
     removeProductFromCart,
     checkCoupon,
     removeCoupon,
-    shoppingCartTotal,
   } = useContext(StoreContext)
 
   const [coupon, setCoupon] = useState("")

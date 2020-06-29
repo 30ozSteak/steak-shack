@@ -1,17 +1,16 @@
 .footer {
   padding: 100px 100px;
-  margin-left: 288px;
   line-height: 2rem;
   display: flex;
   background-color: #fafafa;
-  color: black;
+  color: #363636;
   justify-content: space-between;
 }
 
 .footer .left-columns {
   display: flex;
   margin: auto 0;
-  color: black;
+  color: #363636;
 }
 
 .footer-links {
@@ -43,18 +42,8 @@
   width: 100%;
 }
 
-.footer p {
-  line-height: 2rem;
-}
-
 p svg {
   font-size: 1rem;
-  position: relative;
-  top: 3px;
-}
-
-.social-block {
-  margin-top: 1rem;
 }
 
 .social-block svg {

@@ -48,19 +48,9 @@ const Billboard = () => {
             overlayColor="#04040454"
             fluid={firstImage.localFile.childImageSharp.fluid}
           ></Image>
-          <Link
-            style={{
-              position: "relative",
-              left: "5rem",
-              bottom: "5rem",
-              color: "white",
-              padding: "1rem",
-            }}
-            className="button is-dark"
-            to={`/product/${product.handle}`}
-          >
+          <Link className="button is-dark" to={`/product/${product.handle}`}>
             Shop the Premium-Cut Collection
-            <BsArrowRight style={{ marginLeft: "10px" }} />
+            <BsArrowRight />
           </Link>
         </div>
         <div>
