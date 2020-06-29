@@ -11,6 +11,7 @@ const CartIcon = ({ quantity, toggleCartOpen, shoppingCartTotal }) => {
           </div>
         )}
       </div>
+      Cart
       <div className="cart-icon" onClick={toggleCartOpen}>
         <GrShop />
       </div>

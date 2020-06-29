@@ -39,7 +39,9 @@ const Footer = ({ siteTitle }) => (
       </ul>
     </div>
     <div>
-      <AiOutlineCopyright /> {new Date().getFullYear()} {siteTitle} <br />
+      <AiOutlineCopyright /> {new Date().getFullYear()}{" "}
+      <a href="https://www.twitter.com/iaaafm">{siteTitle} </a>
+      <br />
       Built with
       <a href="https://www.gatsbyjs.org"> Gatsby</a>, Powered by{" "}
       <a href="https://www.shopify.com">Shopify</a>

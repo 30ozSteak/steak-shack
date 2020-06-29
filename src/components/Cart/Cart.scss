@@ -3,7 +3,7 @@
   overflow: hidden;
   align-items: center;
   padding: 1rem;
-  width: 10rem;
+  width: 12rem;
   cursor: pointer;
 }
 
@@ -13,9 +13,10 @@
 
 .cart-icon-container svg {
   color: var(--black);
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   transition: 0.2s;
+  margin-left: 5px;
 }
 
 .cart-icon-container:hover svg {
