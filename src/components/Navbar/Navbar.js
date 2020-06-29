@@ -16,9 +16,9 @@ const Navbar = ({ siteTitle }) => {
   const { isCartOpen, toggleCartOpen, checkout } = useContext(StoreContext)
 
   const transitions = useTransition(isCartOpen, null, {
-    from: { transform: "translate3d(0%, 0, 0)" },
-    enter: { transform: "translate3d(80%, 0, 0)" },
-    leave: { transform: "translate3d(0%, 0, 0)" },
+    from: { transform: "translate3d(100%, 0, 0)" },
+    enter: { transform: "translate3d(0, 0, 0)" },
+    leave: { transform: "translate3d(100%, 0, 0)" },
   })
   const quantity = checkout.lineItems.reduce((total, item) => {
     return total + item.quantity
@@ -28,7 +28,7 @@ const Navbar = ({ siteTitle }) => {
 
   return (
     <>
-      <div className="navbar">
+      <div className="navibar">
         <Link to="/">
           <h1>{siteTitle}</h1>
         </Link>

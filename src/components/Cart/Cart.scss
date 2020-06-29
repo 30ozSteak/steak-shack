@@ -1,18 +1,9 @@
-.button.is-dark:hover {
-  filter: brightness(1.5);
-}
-
 .cart-icon-container {
   text-align: right;
   display: flex;
-  line-height: 36px;
-  box-sizing: border-box;
-  justify-content: flex-end;
-  border: 2px solid transparent;
 }
 
 .cart-icon-container button {
-  position: relative;
   background: transparent;
   padding: 5px;
   border: none;
@@ -31,6 +22,18 @@
   position: relative;
 }
 
+.cart-open {
+  background: #fafafa;
+  box-shadow: var(--elevation-4);
+  height: 100%;
+  right: 0;
+  overflow: scroll;
+  position: fixed;
+  padding: 40px 2%;
+  top: 0;
+  width: 360px;
+}
+
 .cart-open h5 {
   margin: 2rem 0.5rem;
   margin-top: 4.5rem;
@@ -39,18 +42,6 @@
 
 h5 span {
   font-weight: 900;
-}
-
-.cart-open {
-  background: #fafafa;
-  box-shadow: 2px 0 2px -1px #888;
-  height: 100%;
-  left: 0;
-  overflow: scroll;
-  position: fixed;
-  padding: 40px 2%;
-  top: 0;
-  width: 360px;
 }
 
 .quantity-container {
