@@ -23,7 +23,7 @@ const Loader = () => {
             right: 0,
             bottom: 0,
             zIndex: 1000,
-            background: "var(--xtraPurp)",
+            background: "var(--black)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",

@@ -30,21 +30,13 @@ const Cart = ({ style, quantity }) => {
       {checkout.lineItems.length > 0 ? (
         <>
           {checkout.lineItems.map(item => (
-            <div
-              key={item.id}
-              style={{ display: "flex", marginBottom: "2rem" }}
-            >
-              <div className="products-cart-container">
-                <img src={item.variant.image.src} alt="" />
-              </div>
+            <div className="cart-item" key={item.id}>
+              <img src={item.variant.image.src} alt="" />
               <div>
-                <h4 className="title is-6">{item.title}</h4>
-                <p className="subtitle is-6">${item.variant.price}</p>
-
-                <div style={{ display: "flex" }}>
-                  <p className="subtitle is-6" style={{ marginRight: "4rem" }}>
-                    Qty: {item.quantity}{" "}
-                  </p>
+                <h4>{item.title}</h4>
+                <p>${item.variant.price}</p>
+                <div>
+                  <p>Qty: {item.quantity} </p>
                   <button
                     onClick={() => removeProductFromCart(item.id)}
                     className="is-small button is-dark is-outlined"

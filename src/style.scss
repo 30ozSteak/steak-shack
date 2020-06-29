@@ -11,6 +11,13 @@
   src: url(../src/Fonts/TTCommons-Medium.woff) format("woff2");
 }
 
+.button.is-dark {
+  transition: 0.2s;
+}
+.button.is-dark:hover {
+  filter: brightness(1.5);
+}
+
 :root {
   --black: #363636;
 

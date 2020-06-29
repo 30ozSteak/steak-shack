@@ -1,13 +1,14 @@
 .cart-icon-container {
-  text-align: right;
   display: flex;
+  overflow: hidden;
+  align-items: center;
+  padding: 1rem;
+  width: 10rem;
+  cursor: pointer;
 }
 
-.cart-icon-container button {
-  background: transparent;
-  padding: 5px;
-  border: none;
-  cursor: pointer;
+.cart-preview {
+  width: 6rem;
 }
 
 .cart-icon-container svg {
@@ -29,14 +30,13 @@
   right: 0;
   overflow: scroll;
   position: fixed;
-  padding: 40px 2%;
+  padding: 14px 1.5%;
   top: 0;
   width: 360px;
+  z-index: 100;
 }
 
 .cart-open h5 {
-  margin: 2rem 0.5rem;
-  margin-top: 4.5rem;
   text-transform: uppercase;
 }
 
@@ -46,31 +46,33 @@ h5 span {
 
 .quantity-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  align-content: center;
+  height: 5rem;
 }
 
 .quantity-container svg {
   color: var(--black);
 
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   position: relative;
-  right: -2rem;
-  bottom: -1rem;
   transition: 0.2s;
 }
 
 .quantity-container svg:hover {
   color: black;
-  transform: rotate(90deg);
+  transform: scale(1.1);
 }
 
-.products-cart-container {
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
-  margin-right: 10px;
-  max-height: 50vh;
-  overflow: scroll;
+.cart-item {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item img {
+  width: 50%;
+  padding: 1rem;
 }

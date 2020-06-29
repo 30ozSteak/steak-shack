@@ -28,6 +28,7 @@ const Navbar = ({ siteTitle }) => {
 
   return (
     <>
+      <Loader />
       <div className="navibar">
         <Link to="/">
           <h1>{siteTitle}</h1>
@@ -43,8 +44,6 @@ const Navbar = ({ siteTitle }) => {
           toggleCartOpen={toggleCartOpen}
         />
       </div>
-
-      <Loader />
     </>
   )
 }

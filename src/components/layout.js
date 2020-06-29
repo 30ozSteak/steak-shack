@@ -21,7 +21,9 @@ const Layout = ({ children }) => {
     <>
       <Navbar siteTitle={data.site.siteMetadata.title} />
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <main className="section">{children}</main>
+        <main className="section" style={{ paddingTop: 0 }}>
+          {children}
+        </main>
         <Newsletter />
         <Footer siteTitle={data.site.siteMetadata.title} />
       </div>

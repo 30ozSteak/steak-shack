@@ -1,9 +1,9 @@
 import React from "react"
 import Image from "gatsby-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { BsArrowRight } from "react-icons/bs"
+import "./Featured.scss"
 
-const Billboard = () => {
+const Featured = () => {
   const { shopifyProduct: product } = useStaticQuery(
     graphql`
       query featured {
@@ -26,6 +26,7 @@ const Billboard = () => {
               childImageSharp {
                 fluid(maxWidth: 600, maxHeight: 500) {
                   ...GatsbyImageSharpFluid_withWebp
+                  ...GatsbyImageSharpFluidLimitPresentationSize
                 }
               }
             }
@@ -41,25 +42,13 @@ const Billboard = () => {
   } = product
 
   return (
-    <div>
-      <div>
-        <div>
-          <Image
-            overlayColor="#04040454"
-            fluid={firstImage.localFile.childImageSharp.fluid}
-          ></Image>
-          <Link className="button is-dark" to={`/product/${product.handle}`}>
-            Shop the Premium-Cut Collection
-            <BsArrowRight />
-          </Link>
-        </div>
-        <div>
-          {/* <h3 className="title">{product.title}</h3> */}
-          {/* <p className="subtitle is-4">${firstVariant.price}</p> */}
-        </div>
+    <div className="featured-container">
+      <div className="first-featured">
+        <Image fluid={firstImage.localFile.childImageSharp.fluid} />
+        <Link to={`/product/${product.handle}`}>Shop Stickers</Link>
       </div>
     </div>
   )
 }
 
-export default Billboard
+export default Featured
