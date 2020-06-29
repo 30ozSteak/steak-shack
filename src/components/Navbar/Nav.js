@@ -19,7 +19,7 @@ const Nav = () => {
   )
 
   return (
-    <nav className="nav">
+    <div>
       <li>
         <Link to={"/"}> Home </Link>
       </li>
@@ -30,7 +30,7 @@ const Nav = () => {
           </li>
         )
       })}
-    </nav>
+    </div>
   )
 }
 

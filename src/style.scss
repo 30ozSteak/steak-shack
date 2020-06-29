@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
 
 // If need, change your variables before importing Bulma
+
+* {
+  font-family: "STEAK";
+}
+
+@font-face {
+  font-family: STEAK;
+  src: url(../src/Fonts/TTCommons-Medium.woff) format("woff2");
+}
+
 :root {
   --purp: #524763;
   --purp-20: #6a5c80;

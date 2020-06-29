@@ -28,7 +28,7 @@ const Navbar = ({ siteTitle }) => {
 
   return (
     <>
-      <div className="Navbar">
+      <div className="navbar">
         <div>
           <Link to="/">
             <h1>{siteTitle}</h1>
@@ -39,12 +39,13 @@ const Navbar = ({ siteTitle }) => {
           ({ item, key, props }) =>
             item && <Cart quantity={quantity} key={key} style={props} />
         )}
+        <CartIcon
+          shoppingCartTotal={shoppingCartTotal}
+          quantity={quantity}
+          toggleCartOpen={toggleCartOpen}
+        />
       </div>
-      <CartIcon
-        shoppingCartTotal={shoppingCartTotal}
-        quantity={quantity}
-        toggleCartOpen={toggleCartOpen}
-      />
+
       <Loader />
     </>
   )
