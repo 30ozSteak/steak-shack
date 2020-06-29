@@ -2,7 +2,8 @@
   padding: 50px 100px;
   line-height: 2rem;
   display: flex;
-  color: #363636;
+  color: var(--black);
+
   background-color: white;
   justify-content: space-between;
 }
@@ -10,7 +11,7 @@
 .footer .left-columns {
   display: flex;
   margin: auto 0;
-  color: #363636;
+  color: var(--black);
 }
 
 .footer-links {
@@ -18,7 +19,8 @@
 }
 
 .footer-links a {
-  color: #363636;
+  color: var(--black);
+
   position: relative;
   padding-bottom: 0.2rem;
 }
@@ -27,27 +29,13 @@
   color: black;
 }
 
-.footer-links a::after {
-  background-color: black;
-  bottom: 0;
-  content: "";
-  height: 1px;
-  left: 0;
-  position: absolute;
-  transition: 0.2s;
-  width: 0%;
-}
-
-.footer-links a:hover:after {
-  width: 100%;
-}
-
 p svg {
   font-size: 1rem;
 }
 
 .social-block svg {
-  color: #363636;
+  color: var(--black);
+
   font-size: 2rem;
   margin-right: 1rem;
   text-align: right;

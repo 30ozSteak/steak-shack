@@ -20,7 +20,7 @@
 }
 
 .cart-icon-container svg {
-  color: black;
+  color: var(--black);
   height: 2rem;
   width: 2rem;
   transition: 0.2s;
@@ -59,6 +59,8 @@ h5 span {
 }
 
 .quantity-container svg {
+  color: var(--black);
+
   width: 35px;
   height: 35px;
   cursor: pointer;
