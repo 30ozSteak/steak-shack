@@ -1,17 +1,20 @@
-nav {
-  display: flex;
+* {
+  font-family: "STEAK";
 }
 
 nav li {
   list-style-type: none;
+  margin: 1rem 0;
+}
 
-  display: inline;
+@font-face {
+  font-family: STEAK;
+  src: url(../../Fonts/TTCommons-Medium.woff) format("woff2");
 }
 
 nav a {
   color: #363636;
   font-size: 1rem;
-  display: inline-block;
   font-weight: 400;
   padding-bottom: 5px;
   position: relative;

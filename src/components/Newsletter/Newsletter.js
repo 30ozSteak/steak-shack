@@ -9,13 +9,13 @@ const Newsletter = () => {
       <p>Be the first to know when we drop new gear</p>
       <input
         type="email"
-        class="newsletter__input"
+        className="newsletter__input"
         placeholder="Enter your email"
         name="contact[email]"
         id="Email"
         aria-label="Enter your email"
-        autocorrect="off"
-        autocapitalize="off"
+        autoCorrect="off"
+        autoCapitalize="off"
       />
     </div>
   )

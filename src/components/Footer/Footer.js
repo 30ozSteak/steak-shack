@@ -39,21 +39,19 @@ const Footer = ({ siteTitle }) => (
       </ul>
     </div>
     <div>
-      <p>
-        <AiOutlineCopyright /> {new Date().getFullYear()} {siteTitle} <br />
-        Built with
-        <a href="https://www.gatsbyjs.org"> Gatsby</a>, Powered by{" "}
-        <a href="https://www.shopify.com">Shopify</a>
-        <br />
-        <div className="social-block">
-          <a href="www.twitter.com/iaaafm">
-            <AiOutlineTwitter />
-          </a>
-          <a href="www.github.com/30ozsteak">
-            <AiOutlineGithub />
-          </a>
-        </div>
-      </p>
+      <AiOutlineCopyright /> {new Date().getFullYear()} {siteTitle} <br />
+      Built with
+      <a href="https://www.gatsbyjs.org"> Gatsby</a>, Powered by{" "}
+      <a href="https://www.shopify.com">Shopify</a>
+      <br />
+      <div className="social-block">
+        <a href="www.twitter.com/iaaafm">
+          <AiOutlineTwitter />
+        </a>
+        <a href="www.github.com/30ozsteak">
+          <AiOutlineGithub />
+        </a>
+      </div>
     </div>
   </footer>
 )

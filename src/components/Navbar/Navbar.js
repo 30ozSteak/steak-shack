@@ -7,12 +7,12 @@ import { useTransition } from "react-spring"
 import Cart from "../Cart/Cart"
 import CartIcon from "../Cart/CartIcon"
 import Loader from "../Loader"
-import Nav from "../../components/Sidebar/Nav"
+import Nav from "./Nav"
 
-import "./Sidebar.scss"
+import "./Navbar.scss"
 import "../../style.scss"
 
-const Sidebar = ({ siteTitle }) => {
+const Navbar = ({ siteTitle }) => {
   const { isCartOpen, toggleCartOpen, checkout } = useContext(StoreContext)
 
   const transitions = useTransition(isCartOpen, null, {
@@ -28,13 +28,8 @@ const Sidebar = ({ siteTitle }) => {
 
   return (
     <>
-      <div className="sidebar">
+      <div className="Navbar">
         <div>
-          <CartIcon
-            shoppingCartTotal={shoppingCartTotal}
-            quantity={quantity}
-            toggleCartOpen={toggleCartOpen}
-          />
           <Link to="/">
             <h1>{siteTitle}</h1>
           </Link>
@@ -45,17 +40,22 @@ const Sidebar = ({ siteTitle }) => {
             item && <Cart quantity={quantity} key={key} style={props} />
         )}
       </div>
+      <CartIcon
+        shoppingCartTotal={shoppingCartTotal}
+        quantity={quantity}
+        toggleCartOpen={toggleCartOpen}
+      />
       <Loader />
     </>
   )
 }
 
-Sidebar.propTypes = {
+Navbar.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Sidebar.defaultProps = {
+Navbar.defaultProps = {
   siteTitle: ``,
 }
 
-export default Sidebar
+export default Navbar
