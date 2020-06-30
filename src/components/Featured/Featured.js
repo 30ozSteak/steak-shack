@@ -44,8 +44,13 @@ const Featured = () => {
     <div className="featured-container">
       <div className="first-featured">
         <Image fluid={firstImage.localFile.childImageSharp.fluid} />
-        <button className="is-small button is-dark is-outlined">
-          <Link to={`/product/${product.handle}`}>Shop Stickers</Link>
+        <button className="button is-dark">
+          <Link
+            style={{ color: "white", padding: "2rem" }}
+            to={`/product/${product.handle}`}
+          >
+            Shop Stickers
+          </Link>
         </button>
       </div>
     </div>

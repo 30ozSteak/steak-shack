@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import ProductsListingItem from "./ProductsListingItem"
+import "./ProductListing.scss"
 
 const PRODUCTS_LISTING_QUERY = graphql`
   query ProductsListingQuery {
@@ -22,7 +23,7 @@ const PRODUCTS_LISTING_QUERY = graphql`
             id
             localFile {
               childImageSharp {
-                fluid(maxWidth: 400, maxHeight: 500) {
+                fluid(maxWidth: 300, maxHeight: 400) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -41,7 +42,7 @@ const ProductsListing = () => {
         query={PRODUCTS_LISTING_QUERY}
         render={({ products }) => {
           return (
-            <div className="columns is-multiline" style={{ padding: "1rem" }}>
+            <div className="all-products">
               {products.edges.map(({ node: product }) => (
                 <ProductsListingItem key={product.id} product={product} />
               ))}

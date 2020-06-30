@@ -8,7 +8,7 @@ const ProductCategoriesTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div style={{ width: "80%", margin: "5rem auto" }}>
+      <div style={{ width: "80%", margin: "auto" }}>
         <h2 className="title" style={{ fontSize: "3rem" }}>
           {shopifyCollection.title}
         </h2>

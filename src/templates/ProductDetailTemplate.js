@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import Layout from "../components/layout"
 import AddToCart from "../components/Cart/AddToCart"
+import "./ProductContainer.scss"
 
 const ProductDetailTemplate = ({ data }) => {
   const { shopifyProduct: product } = data
@@ -13,22 +14,14 @@ const ProductDetailTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div
-        style={{
-          display: "flex",
-          margin: "auto",
-          minHeight: "50vh",
-        }}
-      >
-        <div className="column">
+      <div className="product-container">
+        <div className="product-image">
           <Image fluid={firstImage.localFile.childImageSharp.fluid} />
         </div>
-        <div style={{ margin: "3rem", width: "50%" }}>
+        <div className="product-description">
           <h1 className="title">{product.title}</h1>
           <p className="subtitle">${firstVariant.price}</p>
-          <p style={{ maxWidth: "500px", marginBottom: "2rem" }}>
-            {product.description}
-          </p>
+          <p>{product.description}</p>
           <AddToCart variantId={firstVariant.shopifyId} />
         </div>
       </div>
@@ -58,8 +51,9 @@ export const query = graphql`
         id
         localFile {
           childImageSharp {
-            fluid(maxWidth: 300, maxHeight: 400) {
+            fluid(maxWidth: 500, maxHeight: 600) {
               ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluidLimitPresentationSize
             }
           }
         }

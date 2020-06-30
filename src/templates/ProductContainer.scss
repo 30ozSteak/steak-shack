@@ -1,0 +1,21 @@
+.product-container {
+  display: flex;
+  min-height: 80vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.product-image {
+  width: 28rem;
+}
+
+.product-description {
+  width: 50%;
+  min-width: 30rem;
+  padding: 5rem;
+}
+
+.product-description p {
+  margin-bottom: 3rem;
+}
