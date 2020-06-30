@@ -6,9 +6,9 @@ const Loader = () => {
   const { isLoading } = useContext(StoreContext)
 
   const transitions = useTransition(isLoading, null, {
-    from: { transform: "translate3d(100%, 0, 0)", opacity: 1 },
-    enter: { transform: "translate3d(0, 0, 0)", opacity: 1 },
-    leave: { transform: "translate3d(0, 0, -50%)", opacity: 0 },
+    from: { transform: "translate3d(-100%, 0, 0)", opacity: 1 },
+    enter: { transform: "translate3d(0%, 0, 0)", opacity: 1 },
+    leave: { transform: "translate3d(100%, 0, 0)", opacity: 0 },
   })
 
   return transitions.map(
@@ -18,15 +18,12 @@ const Loader = () => {
           key={key}
           style={{
             position: "fixed",
-            top: "4rem",
-            right: 0,
-            width: "3rem",
-            height: "3rem",
-            bottom: 0,
+            top: "0rem",
+            left: 0,
+            width: "100%",
+            height: ".2rem",
             zIndex: 1000,
-            display: "flex",
-            border: "none",
-            backgroundColor: "lightgray",
+            backgroundColor: "var(--black)",
             ...props,
           }}
         ></animated.div>

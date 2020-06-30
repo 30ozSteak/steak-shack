@@ -8,10 +8,15 @@ const ProductsListingItem = ({ product }) => {
     variants: [firstVariant],
   } = product
   return (
-    <article className="column is-one-quarter content">
-      <Link to={`/product/${product.handle}`} style={{ display: "block" }}>
+    <article style={{ textAlign: "center" }} className="column is-one-quarter">
+      <Link
+        to={`/product/${product.handle}`}
+        style={{ color: "var(--black)", display: "block" }}
+      >
         <Image fluid={firstImage.localFile.childImageSharp.fluid} />
-        <h3>{product.title}</h3>
+        <p style={{ marginTop: "1rem", textTransform: "uppercase" }}>
+          {product.title}
+        </p>
         <p>${firstVariant.price}</p>
       </Link>
     </article>

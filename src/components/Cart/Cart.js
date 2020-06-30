@@ -95,7 +95,11 @@ const Cart = ({ style, quantity }) => {
             Total: <p className="title">${checkout.totalPrice}</p>
           </div>
           <div style={{ marginTop: "2rem" }}>
-            <a href={checkout.webUrl} className="button is-fullwidth is-dark">
+            <a
+              href={checkout.webUrl}
+              className="button is-fullwidth is-dark"
+              style={{ color: "white" }}
+            >
               Checkout Now
             </a>
           </div>

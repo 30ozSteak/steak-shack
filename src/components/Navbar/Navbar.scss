@@ -14,10 +14,6 @@
   text-transform: lowercase;
 }
 
-.navibar h1:hover {
-  color: black;
-}
-
 .navibar li {
   list-style-type: none;
   margin: 0 1rem;
@@ -32,6 +28,6 @@
   text-transform: uppercase;
 }
 
-.navibar li a:hover {
-  color: black;
+.navibar a:hover {
+  color: black !important;
 }

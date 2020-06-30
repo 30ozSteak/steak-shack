@@ -71,9 +71,14 @@ h5 span {
 .cart-item {
   display: flex;
   align-items: center;
+  box-sizing: border-box;
+  height: 10rem;
+  overflow: hidden;
+  margin: 1rem 0;
 }
 
 .cart-item img {
   width: 50%;
   padding: 1rem;
+  height: 100%;
 }

@@ -8,11 +8,11 @@ const ProductCategoriesTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div style={{ width: "50%", margin: "auto" }}>
+      <div style={{ width: "80%", margin: "5rem auto" }}>
         <h2 className="title" style={{ fontSize: "3rem" }}>
           {shopifyCollection.title}
         </h2>
-        <div className="columns is-multiline">
+        <div className="columns is-multiline" style={{ letterSpacing: "1px" }}>
           {shopifyCollection.products.map(product => (
             <ProductsListingItem key={product.id} product={product} />
           ))}

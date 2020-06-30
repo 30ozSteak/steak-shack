@@ -1,7 +1,6 @@
 import React from "react"
 import Image from "gatsby-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import "./Featured.scss"
 
 const Featured = () => {
   const { shopifyProduct: product } = useStaticQuery(
@@ -45,7 +44,9 @@ const Featured = () => {
     <div className="featured-container">
       <div className="first-featured">
         <Image fluid={firstImage.localFile.childImageSharp.fluid} />
-        <Link to={`/product/${product.handle}`}>Shop Stickers</Link>
+        <button className="is-small button is-dark is-outlined">
+          <Link to={`/product/${product.handle}`}>Shop Stickers</Link>
+        </button>
       </div>
     </div>
   )

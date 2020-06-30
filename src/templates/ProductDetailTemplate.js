@@ -23,9 +23,9 @@ const ProductDetailTemplate = ({ data }) => {
         <div className="column">
           <Image fluid={firstImage.localFile.childImageSharp.fluid} />
         </div>
-        <div style={{ margin: "3rem" }}>
+        <div style={{ margin: "3rem", width: "50%" }}>
           <h1 className="title">{product.title}</h1>
-          <p className="subtitle is-4">${firstVariant.price}</p>
+          <p className="subtitle">${firstVariant.price}</p>
           <p style={{ maxWidth: "500px", marginBottom: "2rem" }}>
             {product.description}
           </p>
