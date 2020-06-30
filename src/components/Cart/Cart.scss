@@ -5,6 +5,8 @@
   padding: 1rem;
   width: 12rem;
   cursor: pointer;
+  transition: 0.2s;
+  border-radius: 15px;
 }
 
 .cart-preview {
@@ -16,7 +18,11 @@
   height: 1.5rem;
   width: 1.5rem;
   transition: 0.2s;
-  margin-left: 5px;
+  margin-left: 15px;
+}
+
+.cart-icon-container:hover {
+  background-color: rgb(236, 236, 236);
 }
 
 .cart-icon-container:hover svg {

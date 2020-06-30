@@ -3,7 +3,7 @@ import { GrShop } from "react-icons/gr"
 
 const CartIcon = ({ quantity, toggleCartOpen, shoppingCartTotal }) => {
   return (
-    <div className="cart-icon-container">
+    <div className="cart-icon-container" onClick={toggleCartOpen}>
       <div className="cart-preview">
         {quantity > 0 && (
           <div>
@@ -12,7 +12,7 @@ const CartIcon = ({ quantity, toggleCartOpen, shoppingCartTotal }) => {
         )}
       </div>
       Cart
-      <div className="cart-icon" onClick={toggleCartOpen}>
+      <div className="cart-icon">
         <GrShop />
       </div>
     </div>

@@ -7,7 +7,6 @@
 
 .newsletter-container h2 {
   font-size: 1.2rem;
-  margin: 2rem 0;
   text-transform: uppercase;
 }
 
@@ -16,10 +15,26 @@
   border: none;
   font-size: 1rem;
   padding: 2rem 0;
-  border-bottom: 1px solid black;
-  color: black;
+  border-bottom: 0.5px solid var(--black);
+  color: var(--black);
   height: 25px;
   margin: 2rem 0;
   outline: none;
   width: 100%;
+}
+
+.newsletter-container button {
+  font-size: 1.5rem;
+  border: none;
+  margin: none;
+  padding: 1.5rem 0;
+  cursor: pointer;
+  font-family: steak;
+  background-color: transparent;
+}
+
+.hidden {
+  opacity: 0;
+  height: 0;
+  width: 0;
 }

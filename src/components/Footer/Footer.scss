@@ -39,3 +39,11 @@ p svg {
 .social-block svg:hover {
   color: black;
 }
+
+@media (max-width: 767.98px) {
+  .footer {
+    line-height: 1.5rem;
+
+    padding: 50px 20px;
+  }
+}

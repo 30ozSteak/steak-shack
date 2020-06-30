@@ -6,17 +6,25 @@ const Newsletter = () => {
   return (
     <div className="newsletter-container">
       <h2> Newsletter </h2>
-      <p>Be the first to know when we drop new gear</p>
-      <input
-        type="email"
-        className="newsletter__input"
-        placeholder="Enter your email"
-        name="contact[email]"
-        id="Email"
-        aria-label="Enter your email"
-        autoCorrect="off"
-        autoCapitalize="off"
-      />
+      <p> Be the first to know when we have new gear!</p>
+      <form
+        name="contact"
+        method="POST"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+      >
+        <p class="hidden">
+          <input name="bot-field" />
+        </p>
+        <p>
+          <label>
+            <input type="text" name="email" />
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
     </div>
   )
 }
