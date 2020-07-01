@@ -1,5 +1,5 @@
 import React from "react"
-import steakVideo from "../../images/compressedsteak.mp4"
+import steakVideo from "../../images/compressedsteakHANDBRAKE.mp4"
 
 import "./VideoPlayer.scss"
 
