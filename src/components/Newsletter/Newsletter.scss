@@ -2,6 +2,9 @@
   background-color: #ebebeb;
   color: black;
   padding: 50px 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   text-align: left;
 }
 
@@ -24,17 +27,15 @@
 }
 
 .newsletter-container button {
-  font-size: 1.5rem;
-  border: none;
-  margin: none;
-  padding: 1.5rem 0;
+  // font-size: 1rem;
+
+  padding: 0.2rem 1rem;
+  border-radius: 15px;
   cursor: pointer;
   font-family: steak;
-  background-color: transparent;
+  // background-color: transparent;
 }
 
-.hidden {
-  opacity: 0;
-  height: 0;
-  width: 0;
+.newletter-container button:hover {
+  background-color: white !important;
 }

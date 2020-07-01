@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 // import Banner from "../components/Banner/Banner"
 import Featured from "../components/Featured/Featured"
-// import VideoBlock from "../components/VideoBlock"
+import VideoPlayer from "../components/Video/VideoPlayer"
 import "../Fonts/TTCommons-Medium.woff"
 import ProductsListing from "../components/ProductsListing/ProductsListing"
 
@@ -12,8 +12,8 @@ const IndexPage = () => (
     {/* <Banner /> */}
     <Layout>
       <SEO title="Home" />
-      {/* <VideoBlock /> */}
-      <Featured />
+      <VideoPlayer />
+      {/* <Featured /> */}
       <ProductsListing />
     </Layout>
   </div>

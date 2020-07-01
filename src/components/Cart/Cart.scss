@@ -10,7 +10,9 @@
 }
 
 .cart-preview {
-  width: 6rem;
+  display: flex;
+  justify-content: space-evenly;
+  width: 9rem;
 }
 
 .cart-icon-container svg {
@@ -18,11 +20,15 @@
   height: 1.5rem;
   width: 1.5rem;
   transition: 0.2s;
-  margin-left: 15px;
+  // margin-left: 15px;
 }
 
 .cart-icon-container:hover {
   background-color: rgb(236, 236, 236);
+}
+
+.cart-icon-container:active {
+  filter: brightness(1.05);
 }
 
 .cart-icon-container:hover svg {

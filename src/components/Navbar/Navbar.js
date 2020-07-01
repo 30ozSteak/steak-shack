@@ -30,9 +30,9 @@ const Navbar = ({ siteTitle }) => {
     <>
       <Loader />
       <div className="navibar">
-        <Link to="/">
-          <h1>{siteTitle}</h1>
-        </Link>
+        <h1>
+          <Link to="/">{siteTitle}</Link>
+        </h1>
         <Nav />
         {transitions.map(
           ({ item, key, props }) =>

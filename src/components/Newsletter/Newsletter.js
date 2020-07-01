@@ -5,8 +5,10 @@ import "./Newsletter.scss"
 const Newsletter = () => {
   return (
     <div className="newsletter-container">
-      <h2> Newsletter </h2>
-      <p> Be the first to know when we have new gear!</p>
+      <div className="form-intro">
+        <h2> Newsletter </h2>
+        <p> Be the first to know when we have new gear!</p>
+      </div>
       <form
         name="contact"
         method="POST"
@@ -14,11 +16,16 @@ const Newsletter = () => {
         data-netlify="true"
       >
         <p class="hidden">
-          <input name="bot-field" />
+          <input type="hidden" name="bot-field" value="contact" />
         </p>
         <p>
           <label>
-            <input type="text" name="email" />
+            <input
+              type="email"
+              name="email"
+              required="true"
+              placeholder="Email"
+            />
           </label>
         </p>
         <p>
