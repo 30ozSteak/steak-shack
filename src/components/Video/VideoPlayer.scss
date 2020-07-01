@@ -2,6 +2,8 @@
   height: 500px;
   position: relative;
   cursor: pointer;
+  border: 1px solid white;
+  overflow: hidden;
 }
 
 .video-container video {
@@ -23,9 +25,31 @@
   transition: 0.4s;
 }
 
+.video-footer {
+  position: absolute;
+  bottom: 2rem;
+  color: white;
+  text-shadow: 2px 5px 5px black;
+  font-size: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  left: 50%;
+  bottom: -8rem;
+  transition: 0.4s;
+  transform: translate(-50%, -50%);
+}
+
+.video-container:hover .video-footer {
+  background-color: black;
+  bottom: 0rem;
+}
+
 .video-container:hover .collection-container {
   transform: translate(-50%, -50%) scale(1.1);
-  text-shadow: 2px 5px 5px black;
+  text-shadow: 2px 5px 5px rgb(14, 14, 14);
+}
+
+.video-container:active .video-footer {
+  background-color: rgb(36, 36, 36);
 }
 
 .collection-container h1 {
