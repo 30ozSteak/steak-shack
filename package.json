@@ -8,7 +8,6 @@
     "bulma": "^0.7.5",
     "gatsby": "^2.23.11",
     "gatsby-image": "^2.4.9",
-    "gatsby-plugin-breadcrumb": "^10.0.0",
     "gatsby-plugin-manifest": "^2.4.14",
     "gatsby-plugin-netlify": "^2.3.7",
     "gatsby-plugin-offline": "^2.2.10",
@@ -24,7 +23,6 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.10.0",
-    "react-player": "^2.4.0",
     "react-spring": "^8.0.27",
     "shopify-buy": "^2.7.0"
   },
@@ -45,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/30ozSteak/steak-shack"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
