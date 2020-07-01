@@ -24,7 +24,7 @@ const PRODUCTS_LISTING_QUERY = graphql`
             localFile {
               childImageSharp {
                 fluid(maxWidth: 300, maxHeight: 400) {
-                  ...GatsbyImageSharpFluid_withWebp
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }
