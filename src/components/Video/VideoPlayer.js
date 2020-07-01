@@ -12,8 +12,8 @@ const VideoPlayer = () => {
       </div>
       <div className="video-footer">Shop Now</div>
 
-      <video className="video-tag" autoPlay loop muted>
-        <source src={steakVideo} type="video/mp4" autoPlay />
+      <video className="video-tag" autoPlay loop muted preload>
+        <source src={steakVideo} type="video/mp4" autoPlay loop muted preload />
       </video>
     </div>
   )

@@ -39,8 +39,8 @@
 }
 
 .video-container:hover .video-footer {
-  background-color: black;
   bottom: 0rem;
+  border: 3px solid white;
 }
 
 .video-container:hover .collection-container {
@@ -49,7 +49,10 @@
 }
 
 .video-container:active .video-footer {
-  background-color: rgb(36, 36, 36);
+  background-color: white;
+  color: black;
+  text-shadow: none;
+  transition: 0.1s;
 }
 
 .collection-container h1 {
