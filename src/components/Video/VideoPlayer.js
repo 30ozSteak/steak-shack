@@ -7,7 +7,7 @@ const VideoPlayer = () => {
   return (
     <div className="video-container">
       <div className="collection-container">
-        <h1>New at iaaafm.dev</h1>
+        <h1>Now Available</h1>
         <p>The Premium-Cut Collection</p>
       </div>
       <div className="video-footer">Shop Now</div>
