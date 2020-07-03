@@ -22,7 +22,7 @@ const Footer = ({ siteTitle }) => (
           <Link to="../pages/faq.js">Contact</Link>
         </li>
       </ul>
-      <div>
+      <div className="author-block">
         © {new Date().getFullYear()}{" "}
         <a href="https://www.twitter.com/iaaafm">{siteTitle} </a>
         <br />

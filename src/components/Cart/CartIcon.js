@@ -8,9 +8,9 @@ const CartIcon = ({ quantity, toggleCartOpen, shoppingCartTotal }) => {
         {quantity > 0 && (
           <div>
             {quantity}/ $ {shoppingCartTotal}
+            <span>Cart</span>
           </div>
         )}
-        <span>Cart</span>
       </div>
       <div className="cart-icon">
         <GrShop />

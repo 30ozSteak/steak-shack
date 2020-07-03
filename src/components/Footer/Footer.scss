@@ -1,7 +1,7 @@
 .footer {
   color: var(--black);
   // color: rgb(177, 177, 177);
-  padding: rem;
+  padding: 4rem;
   display: flex;
   background-color: #fafafa;
 }
@@ -15,11 +15,11 @@
 }
 
 .footer a {
-  color: rgb(119, 119, 119);
+  color: var(--black);
 }
 
 .footer a:hover {
-  color: var(--black);
+  color: black;
 }
 
 .social-block svg {
@@ -32,6 +32,10 @@
 
 .left-columns {
   padding-right: 2rem;
+}
+
+.author-block {
+  margin-top: 2rem;
 }
 .social-block svg:hover {
   color: black;
