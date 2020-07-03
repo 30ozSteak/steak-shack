@@ -17,6 +17,7 @@
   font-size: 2rem;
   text-transform: lowercase;
   padding: 1rem;
+  width: 100%;
 }
 
 .navibar li {
@@ -26,7 +27,6 @@
 
 .navibar a {
   color: var(--black);
-  height: 100%;
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: 1rem 2rem;
@@ -85,5 +85,6 @@
 
 .nav-items {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(3, 1fr);
 }

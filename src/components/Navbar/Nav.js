@@ -21,9 +21,6 @@ const Nav = () => {
 
   return (
     <div className="nav-items">
-      <li>
-        <Link to={"/"}>Sale</Link>
-      </li>
       {allShopifyCollection.edges.map(edge => {
         return (
           <li key={edge.node.id}>
@@ -31,6 +28,9 @@ const Nav = () => {
           </li>
         )
       })}
+      <li>
+        <Link to={"/"}>Workshop</Link>
+      </li>
     </div>
   )
 }
