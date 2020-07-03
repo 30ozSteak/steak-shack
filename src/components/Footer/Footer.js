@@ -14,7 +14,7 @@ import "./Footer.scss"
 const Footer = ({ siteTitle }) => (
   <footer className="footer">
     <div className="left-columns">
-      <ul className="footer-links">
+      <ul>
         <li>
           <Link to="../pages/faq.js">Help / FAQ</Link>
         </li>
