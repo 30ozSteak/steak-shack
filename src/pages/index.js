@@ -4,8 +4,6 @@ import SEO from "../components/seo"
 import VideoPlayer from "../components/Video/VideoPlayer"
 import ProductsListing from "../components/ProductsListing/ProductsListing"
 
-import { Breadcrumb } from "gatsby-plugin-breadcrumb"
-
 const IndexPage = () => (
   <div>
     <Layout>
