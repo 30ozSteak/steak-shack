@@ -64,3 +64,18 @@
     display: none;
   }
 }
+
+@media (max-width: 767.98px) {
+  .navibar {
+    padding: 1.5rem;
+  }
+  .navibar h1 a {
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+  }
+
+  .navibar li {
+    display: none;
+  }
+}
