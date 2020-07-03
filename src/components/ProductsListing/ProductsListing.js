@@ -42,10 +42,8 @@ const ProductsListing = () => {
         query={PRODUCTS_LISTING_QUERY}
         render={({ products }) => {
           return (
-            <div style={{ width: "80%", margin: "auto" }}>
-              <h2 className="title" style={{ fontSize: "3rem" }}>
-                All Products
-              </h2>
+            <div className="all-products-container">
+              <h2 className="title">All Products</h2>
               <div className="all-products">
                 {products.edges.map(({ node: product }) => (
                   <ProductsListingItem key={product.id} product={product} />

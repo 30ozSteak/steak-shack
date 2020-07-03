@@ -1,16 +1,16 @@
 .navibar {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: spread;
   align-items: center;
   background-color: white;
-  padding: 1rem;
+  margin: auto;
 
   position: sticky;
   top: 0rem;
   z-index: 50;
-  // padding: 5rem 5rem;
+  padding: 1rem 2rem;
 }
 
 .navibar h1 a {
@@ -21,14 +21,13 @@
 
 .navibar li {
   list-style-type: none;
-  margin: 0 1rem;
   display: inline;
 }
 
 .navibar a {
   color: var(--black);
   height: 100%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   padding: 1rem 2rem;
   border-radius: 15px;
@@ -44,9 +43,28 @@
   filter: brightness(1.05);
 }
 
-@media (max-width: 850px) {
+@media (max-width: 933px) {
   .navibar {
+    padding: 0.5rem;
+  }
+
+  .navibar a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navibar {
+    padding: 1.5rem;
+  }
+  .navibar h1 a {
+    font-size: 2rem;
+    display: inline;
     padding: 1rem;
+  }
+
+  .navibar li {
+    font-size: 1rem;
   }
 }
 
@@ -65,17 +83,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
-  .navibar {
-    padding: 1.5rem;
-  }
-  .navibar h1 a {
-    font-size: 2rem;
-    display: inline;
-    padding: 1rem;
-  }
-
-  .navibar li {
-    display: none;
-  }
+.nav-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }

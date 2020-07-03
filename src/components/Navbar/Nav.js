@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import "./Navbar.scss"
 
 const Nav = () => {
   const { allShopifyCollection } = useStaticQuery(
@@ -19,7 +20,10 @@ const Nav = () => {
   )
 
   return (
-    <div>
+    <div className="nav-items">
+      <li>
+        <Link to={"/"}>Sale</Link>
+      </li>
       {allShopifyCollection.edges.map(edge => {
         return (
           <li key={edge.node.id}>

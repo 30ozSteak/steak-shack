@@ -8,11 +8,9 @@ const ProductCategoriesTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div style={{ width: "80%", margin: "auto" }}>
-        <h2 className="title" style={{ fontSize: "3rem" }}>
-          {shopifyCollection.title}
-        </h2>
-        <div className="columns is-multiline" style={{ letterSpacing: "1px" }}>
+      <div className="all-products-container">
+        <h2 className="title">{shopifyCollection.title}</h2>
+        <div className="all-products">
           {shopifyCollection.products.map(product => (
             <ProductsListingItem key={product.id} product={product} />
           ))}
@@ -44,7 +42,7 @@ export const query = graphql`
           id
           localFile {
             childImageSharp {
-              fluid(maxWidth: 500, maxHeight: 600) {
+              fluid(maxWidth: 300, maxHeight: 400) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }
