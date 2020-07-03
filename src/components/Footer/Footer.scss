@@ -1,8 +1,25 @@
-footer {
+.footer {
   color: var(--black);
+  // color: rgb(177, 177, 177);
+  padding: rem;
   display: flex;
-  justify-content: space-evenly;
-  background-color: white;
+  background-color: #fafafa;
+}
+
+.footer div {
+  width: 50%;
+}
+
+.footer div:first-of-type {
+  padding: 0;
+}
+
+.footer a {
+  color: rgb(119, 119, 119);
+}
+
+.footer a:hover {
+  color: var(--black);
 }
 
 .social-block svg {
@@ -23,7 +40,15 @@ footer {
 @media (max-width: 767.98px) {
   .footer {
     line-height: 1.5rem;
-
     padding: 50px 20px;
+    flex-direction: column;
+  }
+
+  .footer div {
+    width: 100%;
+  }
+
+  .footer div:first-child {
+    margin-bottom: 2rem;
   }
 }

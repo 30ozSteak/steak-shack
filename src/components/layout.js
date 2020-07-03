@@ -24,7 +24,6 @@ const Layout = ({ children }) => {
         <main className="section" style={{ paddingTop: 0 }}>
           {children}
         </main>
-        <Newsletter />
         <Footer siteTitle={data.site.siteMetadata.title} />
       </div>
     </>

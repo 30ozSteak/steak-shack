@@ -3,10 +3,10 @@
   overflow: hidden;
   align-items: center;
   padding: 1rem;
-  width: 12rem;
   cursor: pointer;
   transition: 0.2s;
   border-radius: 15px;
+  justify-content: space-evenly;
 }
 
 .cart-preview {
@@ -66,7 +66,6 @@ h5 span {
 
 .quantity-container svg {
   color: var(--black);
-
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -95,18 +94,22 @@ h5 span {
 }
 
 @media (max-width: 700px) {
-  .cart-open {
-    width: 100%;
+  .cart-icon-container svg {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .cart-icon-container {
+    width: 50%;
   }
 }
 
 @media (max-width: 450px) {
-  .cart-icon-container {
-    padding: 0.2rem;
-    width: 12rem;
-  }
   .cart-preview {
-    // display: none;
-    opacity: 0;
+    display: none;
+  }
+
+  .cart-icon-container {
+    width: 20%;
   }
 }
