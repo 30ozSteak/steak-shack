@@ -15,7 +15,6 @@ const Footer = ({ siteTitle }) => (
   <footer className="footer">
     <div className="left-columns">
       <ul className="footer-links">
-        <li>Customer Service</li>
         <li>
           <Link to="../pages/faq.js">Help / FAQ</Link>
         </li>
@@ -26,20 +25,9 @@ const Footer = ({ siteTitle }) => (
           <Link to="../pages/faq.js">Contact Us</Link>
         </li>
       </ul>
-      <ul className="footer-links">
-        <li>
-          <Link to="../pages/faq.js">Shop</Link>
-        </li>
-        <li>
-          <Link to="../pages/faq.js">Blog</Link>
-        </li>
-        <li>
-          <Link to="../pages/faq.js">About our stickers</Link>
-        </li>
-      </ul>
     </div>
     <div>
-      <AiOutlineCopyright /> {new Date().getFullYear()}{" "}
+      © {new Date().getFullYear()}{" "}
       <a href="https://www.twitter.com/iaaafm">{siteTitle} </a>
       <br />
       Built with

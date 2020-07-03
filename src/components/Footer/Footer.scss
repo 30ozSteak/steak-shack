@@ -1,35 +1,12 @@
-.footer {
-  padding: 50px 100px;
-  line-height: 2rem;
-  display: flex;
+footer {
   color: var(--black);
-
+  display: flex;
+  justify-content: space-evenly;
   background-color: white;
-  justify-content: space-between;
-}
-
-.footer .left-columns {
-  display: flex;
-  margin: auto 0;
-  color: var(--black);
-}
-
-.footer-links {
-  padding-right: 5rem;
-}
-
-.footer-links a {
-  position: relative;
-  padding-bottom: 0.2rem;
-}
-
-p svg {
-  font-size: 1rem;
 }
 
 .social-block svg {
   color: var(--black);
-
   font-size: 2rem;
   margin-right: 1rem;
   text-align: right;
