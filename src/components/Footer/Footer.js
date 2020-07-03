@@ -2,8 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import Newsletter from "../../components/Newsletter/Newsletter"
 
-import { AiOutlineTwitter, AiOutlineGithub } from "react-icons/ai"
-
 // I should do a static query to my own gatsby config and pull most of this out
 
 import "./Footer.scss"
