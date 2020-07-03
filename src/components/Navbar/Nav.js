@@ -20,9 +20,6 @@ const Nav = () => {
 
   return (
     <div>
-      <li>
-        <Link to={"/"}> Home </Link>
-      </li>
       {allShopifyCollection.edges.map(edge => {
         return (
           <li key={edge.node.id}>

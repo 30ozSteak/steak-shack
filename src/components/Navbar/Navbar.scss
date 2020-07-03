@@ -44,15 +44,20 @@
   filter: brightness(1.05);
 }
 
+@media (max-width: 850px) {
+  .navibar {
+    padding: 1rem;
+  }
+}
+
 @media (max-width: 767.98px) {
   .navibar {
     padding: 1.5rem;
   }
-  .navibar h1 {
+  .navibar h1 a {
     font-size: 2rem;
-    width: 100%;
-    display: block;
-    padding: 0;
+    display: inline;
+    padding: 1rem;
   }
 
   .navibar li {
