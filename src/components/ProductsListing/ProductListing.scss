@@ -12,9 +12,8 @@
 }
 
 .all-products-product {
-  // width: 50%;
   text-align: center;
-  width: 45vh;
+  width: 40vh;
 }
 
 .all-products-product a {
@@ -23,4 +22,18 @@
 
 .all-products-product:hover a {
   color: black;
+}
+
+@media (max-width: 1200px) {
+  .all-products-container {
+    width: 100%;
+    min-height: 80vh;
+  }
+
+  .all-products-product {
+    text-align: center;
+    width: 50%;
+    // margin: 1rem;
+    padding: 1rem;
+  }
 }
