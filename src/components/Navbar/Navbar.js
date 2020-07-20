@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StoreContext } from "../../context/StoreContext"
 import { useTransition } from "react-spring"
+import Hamburger from "./Hamburger"
 
 import Cart from "../Cart/Cart"
 import CartIcon from "../Cart/CartIcon"
@@ -13,7 +14,13 @@ import "./Navbar.scss"
 import "../../style.scss"
 
 const Navbar = ({ siteTitle }) => {
-  const { isCartOpen, toggleCartOpen, checkout } = useContext(StoreContext)
+  const {
+    isCartOpen,
+    isNavOpen,
+    toggleCartOpen,
+    toggleNavOpen,
+    checkout,
+  } = useContext(StoreContext)
 
   const transitions = useTransition(isCartOpen, null, {
     from: { transform: "translate3d(100%, 0, 0)" },
@@ -38,6 +45,7 @@ const Navbar = ({ siteTitle }) => {
           ({ item, key, props }) =>
             item && <Cart quantity={quantity} key={key} style={props} />
         )}
+        <Hamburger toggleMenuOpen={toggleNavOpen} />
         <CartIcon
           shoppingCartTotal={shoppingCartTotal}
           quantity={quantity}

@@ -20,7 +20,7 @@ const Loader = () => {
             position: "fixed",
             top: "0rem",
             left: 0,
-            width: "100%",
+            width: "110%",
             height: ".5rem",
             zIndex: 1000,
             backgroundColor: "var(--black)",

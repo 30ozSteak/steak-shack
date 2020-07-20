@@ -7,6 +7,7 @@ const client = Client.buildClient({
 })
 
 const defaultValues = {
+  isHamburgerOpen: false,
   isCartOpen: false,
   isLoading: false,
   toggleCartOpen: () => {},
@@ -26,12 +27,16 @@ export const StoreContext = createContext(defaultValues)
 const isBrowser = typeof window !== "undefined"
 
 export const StoreProvider = ({ children }) => {
+  // these are the pieces of state that I want available throughout the app
   const [checkout, setCheckout] = useState(defaultValues.checkout)
   const [isCartOpen, setCartOpen] = useState(false)
   const [isLoading, setLoading] = useState(false)
+  const [isNavOpen, setNavOpen] = useState(false)
 
   const toggleCartOpen = () => setCartOpen(!isCartOpen)
+  const toggleNavOpen = () => setNavOpen(!isNavOpen)
 
+  // this function runs when the app loads
   useEffect(() => {
     initializeCheckout()
   }, [])
@@ -136,7 +141,9 @@ export const StoreProvider = ({ children }) => {
         checkout,
         addProductToCart,
         toggleCartOpen,
+        toggleNavOpen,
         isCartOpen,
+        isNavOpen,
         removeProductFromCart,
         checkCoupon,
         removeCoupon,

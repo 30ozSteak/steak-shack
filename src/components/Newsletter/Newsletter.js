@@ -15,7 +15,7 @@ const Newsletter = () => {
         netlify-honeypot="bot-field"
         data-netlify="true"
       >
-        <p class="hidden">
+        <p className="hidden">
           <input type="hidden" name="bot-field" value="contact" />
         </p>
         <div className="button-box">
@@ -23,7 +23,7 @@ const Newsletter = () => {
             <input
               type="email"
               name="email"
-              required="true"
+              required={true}
               placeholder="Email"
             />
           </label>

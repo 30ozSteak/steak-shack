@@ -10,7 +10,7 @@ const IndexPage = () => (
       <SEO title="Home" />
       {/* <Featured /> */}
       <ProductsListing />
-      <VideoPlayer />
+      {/* <VideoPlayer /> */}
     </Layout>
   </div>
 )
