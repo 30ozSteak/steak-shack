@@ -1,7 +1,7 @@
 import React from "react"
 import { GrShop } from "react-icons/gr"
 
-const CartIcon = ({ quantity, toggleCartOpen, shoppingCartTotal }) => {
+const CartIcon = ({ quantity, toggleCartOpen }) => {
   return (
     <div className="cart-icon-container" onClick={toggleCartOpen}>
       <div className="cart-icon">

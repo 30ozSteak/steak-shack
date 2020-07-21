@@ -50,7 +50,7 @@ const Navbar = ({ siteTitle }) => {
             quantity={quantity}
             toggleCartOpen={toggleCartOpen}
           />
-          <Hamburger toggleNavOpen={toggleNavOpen} />
+          <Hamburger isNavOpen={isNavOpen} toggleNavOpen={toggleNavOpen} />
         </div>
       </div>
     </>

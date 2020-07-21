@@ -38,7 +38,7 @@ export const StoreProvider = ({ children }) => {
   const [isNavOpen, setNavOpen] = useState(false)
 
   const toggleCartOpen = () => setCartOpen(!isCartOpen)
-  const toggleNavOpen = () => console.log("poop")
+  const toggleNavOpen = () => setNavOpen(!isNavOpen)
 
   // this function runs when the app loads
   useEffect(() => {

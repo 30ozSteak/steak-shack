@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 
 import { animated, useSpring, config } from "react-spring"
 import { StoreContext } from "../../context/StoreContext"
@@ -19,27 +19,26 @@ let closedHamburger = {
   color: "#000",
 }
 
-const Hamburger = toggleNavOpen => {
-  const [isNavOpen] = useContext(StoreContext)
-
+const Hamburger = ({ isNavOpen, toggleNavOpen }) => {
   let { top, center, bottom, color } = useSpring({
     to: isNavOpen ? closedHamburger : openedHamburger,
     config: config.stiff,
   })
 
   return (
-    <div onClick={() => toggleNavOpen}>
+    <div>
       <animated.svg
-        width="30"
-        height="60"
+        width="25"
+        height="58"
         viewBox="0 0 44 41"
         fill={color}
         xmlns="http://www.w3.org/2000/svg"
         className="hamburger-menu"
+        onClick={toggleNavOpen}
       >
-        <animated.rect width="35" height="3" rx="0" transform={top} />
-        <animated.rect width="35" height="3" rx="0" transform={center} />
-        <animated.rect width="35" height="3" rx="0" transform={bottom} />
+        <animated.rect width="40" height="3.5" rx="0" transform={top} />
+        <animated.rect width="40" height="3.5" rx="0" transform={center} />
+        <animated.rect width="40" height="3.5" rx="0" transform={bottom} />
       </animated.svg>
     </div>
   )
