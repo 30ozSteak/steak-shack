@@ -7,10 +7,11 @@ const client = Client.buildClient({
 })
 
 const defaultValues = {
-  isHamburgerOpen: false,
+  isNavOpen: false,
   isCartOpen: false,
   isLoading: false,
   toggleCartOpen: () => {},
+  toggleNavOpen: () => {},
   cart: [],
   addProductToCart: () => {},
   checkCoupon: () => {},
@@ -18,6 +19,9 @@ const defaultValues = {
   client,
   checkout: {
     lineItems: [],
+  },
+  favorites: {
+    faves: [],
   },
 }
 
@@ -34,7 +38,7 @@ export const StoreProvider = ({ children }) => {
   const [isNavOpen, setNavOpen] = useState(false)
 
   const toggleCartOpen = () => setCartOpen(!isCartOpen)
-  const toggleNavOpen = () => setNavOpen(!isNavOpen)
+  const toggleNavOpen = () => console.log("poop")
 
   // this function runs when the app loads
   useEffect(() => {

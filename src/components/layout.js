@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Footer from "./Footer/Footer"
 
 import Navbar from "../components/Navbar/Navbar"
 
@@ -23,6 +24,7 @@ const Layout = ({ children }) => {
           {children}
         </main>
       </div>
+      <Footer />
     </>
   )
 }

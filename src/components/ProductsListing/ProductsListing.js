@@ -53,7 +53,6 @@ const ProductsListing = () => {
           )
         }}
       />
-      <Footer />
     </div>
   )
 }

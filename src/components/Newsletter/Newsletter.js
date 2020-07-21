@@ -7,7 +7,7 @@ const Newsletter = () => {
     <div className="newsletter-container">
       <div className="form-intro">
         <h2>Newsletter</h2>
-        <p> All the nerds have one now. </p>
+        <p> Be the first to know when we drop new gear, courses, and more! </p>
       </div>
       <form
         name="contact"

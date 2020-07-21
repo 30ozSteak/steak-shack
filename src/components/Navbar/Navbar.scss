@@ -1,56 +1,42 @@
 .navibar {
   width: 100%;
   display: flex;
-  justify-items: spread;
   align-items: center;
+  justify-content: space-between;
   background-color: white;
   margin: auto;
   position: sticky;
+  user-select: none;
   top: 0rem;
   z-index: 50;
   padding: 1rem 2rem;
 }
 
-.navibar h1 a {
-  text-transform: lowercase;
-  padding: 1rem;
-  width: 100%;
+.nav-items {
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
-.navibar li {
-  list-style-type: none;
-  display: inline;
+.nav-right {
+  display: flex;
 }
 
 .navibar a {
   font-size: 1.3rem;
+  margin: 1rem;
   color: var(--black);
-  // text-transform: uppercase;
-  padding: 1rem;
   transition: 0.2s;
+  border-bottom: 3px solid transparent;
 }
 
 .navibar a:hover {
-  color: white;
-  background-color: black;
-}
-
-.navibar a:active {
-  filter: brightness(1.05);
+  border-bottom: 3px solid var(--black);
 }
 
 .hamburger-menu {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 1.5rem;
   cursor: pointer;
-  background-color: #121212;
+  color: var(--black);
   transition: 0.2s;
   z-index: 500;
-}
-
-.hamburger-menu:active {
-  filter: brightness(1.5);
-  transition: 0.5s;
 }

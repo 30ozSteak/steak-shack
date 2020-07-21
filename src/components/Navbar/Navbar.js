@@ -27,6 +27,7 @@ const Navbar = ({ siteTitle }) => {
     enter: { transform: "translate3d(0, 0, 0)" },
     leave: { transform: "translate3d(100%, 0, 0)" },
   })
+
   const quantity = checkout.lineItems.reduce((total, item) => {
     return total + item.quantity
   }, 0)
@@ -37,21 +38,20 @@ const Navbar = ({ siteTitle }) => {
     <>
       <Loader />
       <div className="navibar">
-        <h1>
-          <Link to="/"> iaaafm.dev </Link>
-        </h1>
-        <Hamburger toggleNavOpen={toggleNavOpen} />
-
-        <Nav />
-        {transitions.map(
-          ({ item, key, props }) =>
-            item && <Cart quantity={quantity} key={key} style={props} />
-        )}
-        <CartIcon
-          shoppingCartTotal={shoppingCartTotal}
-          quantity={quantity}
-          toggleCartOpen={toggleCartOpen}
-        />
+        <Link to="/"> iaaafm.dev </Link>
+        <div class="nav-right">
+          <Nav />
+          {transitions.map(
+            ({ item, key, props }) =>
+              item && <Cart quantity={quantity} key={key} style={props} />
+          )}
+          <CartIcon
+            shoppingCartTotal={shoppingCartTotal}
+            quantity={quantity}
+            toggleCartOpen={toggleCartOpen}
+          />
+          <Hamburger toggleNavOpen={toggleNavOpen} />
+        </div>
       </div>
     </>
   )
