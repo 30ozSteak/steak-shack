@@ -37,9 +37,9 @@ const Navbar = ({ siteTitle }) => {
   return (
     <>
       <Loader />
-      <div className="navibar">
+      <div className="nav">
         <Link to="/"> iaaafm.dev </Link>
-        <div class="nav-right">
+        <div className="nav-right">
           <Nav />
           {transitions.map(
             ({ item, key, props }) =>

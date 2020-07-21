@@ -31,15 +31,15 @@ const Hamburger = () => {
     <div onClick={toggleCartOpen}>
       <animated.svg
         width="30"
-        height="30"
-        viewBox="0 0 44 44"
+        height="60"
+        viewBox="0 0 44 40"
         fill={color}
         xmlns="http://www.w3.org/2000/svg"
         className="hamburger-menu"
       >
-        <animated.rect width="40" height="4" rx="0" transform={top} />
-        <animated.rect width="40" height="4" rx="0" transform={center} />
-        <animated.rect width="40" height="4" rx="0" transform={bottom} />
+        <animated.rect width="35" height="3" rx="0" transform={top} />
+        <animated.rect width="35" height="3" rx="0" transform={center} />
+        <animated.rect width="35" height="3" rx="0" transform={bottom} />
       </animated.svg>
     </div>
   )

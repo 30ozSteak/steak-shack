@@ -10,7 +10,7 @@ const IndexPage = () => (
   <div>
     <Layout>
       <SEO title="Home" />
-      <h1>I'm steaky</h1>
+      <h1 style={{ height: "100vh" }}>I'm steaky</h1>
       {/* one day, a great <Featured /> component could go here */}
       {/* Portoflio Landing / Greeting */}
       {/* Blogs / Talks */}
