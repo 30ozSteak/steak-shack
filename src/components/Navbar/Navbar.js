@@ -38,14 +38,15 @@ const Navbar = ({ siteTitle }) => {
       <Loader />
       <div className="navibar">
         <h1>
-          <Link to="/">{siteTitle}</Link>
+          <Link to="/"> iaaafm.dev </Link>
         </h1>
+        <Hamburger toggleNavOpen={toggleNavOpen} />
+
         <Nav />
         {transitions.map(
           ({ item, key, props }) =>
             item && <Cart quantity={quantity} key={key} style={props} />
         )}
-        <Hamburger toggleMenuOpen={toggleNavOpen} />
         <CartIcon
           shoppingCartTotal={shoppingCartTotal}
           quantity={quantity}

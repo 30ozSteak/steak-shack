@@ -11,14 +11,7 @@
   padding: 1rem 2rem;
 }
 
-.nav-items {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .navibar h1 a {
-  font-size: 2rem;
   text-transform: lowercase;
   padding: 1rem;
   width: 100%;
@@ -30,17 +23,16 @@
 }
 
 .navibar a {
+  font-size: 1.3rem;
   color: var(--black);
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  padding: 1rem 2rem;
-  border-radius: 15px;
+  // text-transform: uppercase;
+  padding: 1rem;
   transition: 0.2s;
 }
 
 .navibar a:hover {
-  color: black !important;
-  background-color: rgb(236, 236, 236);
+  color: white;
+  background-color: black;
 }
 
 .navibar a:active {

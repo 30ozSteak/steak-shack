@@ -28,9 +28,6 @@ const Nav = () => {
           </li>
         )
       })}
-      <li>
-        <Link to={"/"}>Workshop</Link>
-      </li>
     </div>
   )
 }

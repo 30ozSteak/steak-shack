@@ -16,9 +16,9 @@ let closedHamburger = {
   color: "#ffffff",
 }
 
-const Hamburger = ({ isHamburgerOpened, isOpened }) => {
+const Hamburger = ({ toggleNavOpen, isNavOpen }) => {
   let { top, center, bottom, color } = useSpring({
-    to: isOpened ? closedHamburger : openedHamburger,
+    to: isNavOpen ? closedHamburger : openedHamburger,
     config: config.stiff,
   })
 
@@ -29,6 +29,7 @@ const Hamburger = ({ isHamburgerOpened, isOpened }) => {
       viewBox="0 0 44 44"
       fill={color}
       xmlns="http://www.w3.org/2000/svg"
+      onClick={toggleNavOpen}
     >
       <animated.rect width="40" height="4" rx="0" transform={top} />
       <animated.rect width="40" height="4" rx="0" transform={center} />

@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Navbar from "../components/Navbar/Navbar"
-import Footer from "../components/Footer/Footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,7 +22,6 @@ const Layout = ({ children }) => {
         <main className="section" style={{ paddingTop: 0 }}>
           {children}
         </main>
-        <Footer siteTitle={data.site.siteMetadata.title} />
       </div>
     </>
   )

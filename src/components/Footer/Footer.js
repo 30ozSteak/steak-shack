@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Newsletter from "../../components/Newsletter/Newsletter"
+import Footer from "../Footer/Footer"
 
 // I should do a static query to my own gatsby config and pull most of this out
 
@@ -22,7 +23,7 @@ const Footer = ({ siteTitle }) => (
       </ul>
       <div className="author-block">
         © {new Date().getFullYear()}{" "}
-        <a href="https://www.twitter.com/iaaafm">{siteTitle} </a>
+        <a href="https://www.twitter.com/iaaafm">iaaafm.dev </a>
         <br />
         Built with
         <a href="https://www.gatsbyjs.org"> Gatsby</a>, Powered by{" "}
