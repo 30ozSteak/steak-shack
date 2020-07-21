@@ -23,7 +23,12 @@
 }
 
 .nav a {
-  font-size: 1.3rem;
+  text-decoration: none;
+  border-bottom: 0px solid;
+}
+
+.nav a {
+  font-size: 1.5rem;
   margin: 1rem;
   color: var(--black);
   transition: 0.2s;
@@ -38,4 +43,9 @@
   margin: 0 1rem;
   cursor: pointer;
   color: var(--black);
+  transition: 0.2s;
+}
+
+.hamburger-menu:hover {
+  transform: scale(1.1);
 }

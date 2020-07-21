@@ -19,8 +19,8 @@ let closedHamburger = {
   color: "#000",
 }
 
-const Hamburger = () => {
-  const [toggleNavOpen, isNavOpen, toggleCartOpen] = useContext(StoreContext)
+const Hamburger = toggleNavOpen => {
+  const [isNavOpen] = useContext(StoreContext)
 
   let { top, center, bottom, color } = useSpring({
     to: isNavOpen ? closedHamburger : openedHamburger,
@@ -28,11 +28,11 @@ const Hamburger = () => {
   })
 
   return (
-    <div onClick={toggleCartOpen}>
+    <div onClick={() => toggleNavOpen}>
       <animated.svg
         width="30"
         height="60"
-        viewBox="0 0 44 40"
+        viewBox="0 0 44 41"
         fill={color}
         xmlns="http://www.w3.org/2000/svg"
         className="hamburger-menu"

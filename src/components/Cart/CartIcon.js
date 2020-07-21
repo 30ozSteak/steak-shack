@@ -4,16 +4,9 @@ import { GrShop } from "react-icons/gr"
 const CartIcon = ({ quantity, toggleCartOpen, shoppingCartTotal }) => {
   return (
     <div className="cart-icon-container" onClick={toggleCartOpen}>
-      {/* <div className="cart-preview">
-        {quantity > 0 && (
-          <div>
-            {quantity}/ $ {shoppingCartTotal}
-            <span>Cart</span>
-          </div>
-        )}
-      </div> */}
       <div className="cart-icon">
         <GrShop />
+        <div>{quantity > 0 && <div className="cart-notification"></div>}</div>
       </div>
     </div>
   )

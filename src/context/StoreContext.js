@@ -33,8 +33,8 @@ const isBrowser = typeof window !== "undefined"
 export const StoreProvider = ({ children }) => {
   // these are the pieces of state that I want available throughout the app
   const [checkout, setCheckout] = useState(defaultValues.checkout)
-  const [isCartOpen, setCartOpen] = useState(false)
   const [isLoading, setLoading] = useState(false)
+  const [isCartOpen, setCartOpen] = useState(false)
   const [isNavOpen, setNavOpen] = useState(false)
 
   const toggleCartOpen = () => setCartOpen(!isCartOpen)
