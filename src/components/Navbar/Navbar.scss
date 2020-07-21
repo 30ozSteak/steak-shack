@@ -8,7 +8,6 @@
   user-select: none;
   top: 0rem;
   z-index: 50;
-  padding: 1rem;
 }
 
 .nav-items {
@@ -18,7 +17,7 @@
 }
 
 .nav a {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 0 1rem;
   color: var(--black);
   transition: 0.2s;
@@ -46,4 +45,9 @@
 
 .hamburger-menu:hover {
   transform: scale(1.1);
+}
+
+button {
+  border: 1px solid transparent;
+  background-color: white;
 }

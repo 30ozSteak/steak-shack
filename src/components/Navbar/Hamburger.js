@@ -26,7 +26,7 @@ const Hamburger = ({ isNavOpen, toggleNavOpen }) => {
   })
 
   return (
-    <div>
+    <button onClick={toggleNavOpen}>
       <animated.svg
         width="25"
         height="58"
@@ -34,13 +34,12 @@ const Hamburger = ({ isNavOpen, toggleNavOpen }) => {
         fill={color}
         xmlns="http://www.w3.org/2000/svg"
         className="hamburger-menu"
-        onClick={toggleNavOpen}
       >
         <animated.rect width="40" height="3.5" rx="0" transform={top} />
         <animated.rect width="40" height="3.5" rx="0" transform={center} />
         <animated.rect width="40" height="3.5" rx="0" transform={bottom} />
       </animated.svg>
-    </div>
+    </button>
   )
 }
 
