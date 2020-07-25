@@ -1,0 +1,17 @@
+.greeting {
+  height: 100vh;
+  text-align: center;
+  margin-top: 15vw;
+  flex-direction: column;
+  .headers {
+    margin: auto;
+  }
+  h1 {
+    font-size: var(--xtra-big-ass-heading);
+    font-weight: 700;
+  }
+  h2 {
+    font-size: var(--heading-two);
+    font-weight: 300;
+  }
+}

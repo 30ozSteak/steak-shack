@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   background-color: white;
   position: sticky;
   user-select: none;
@@ -17,7 +17,7 @@
 }
 
 .nav a {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 0 1rem;
   color: var(--black);
   transition: 0.2s;
@@ -28,12 +28,12 @@
 }
 
 .nav-right a {
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
   // min-width: 5rem;
 }
 
 .nav-right a:hover {
-  border-bottom: 3px solid var(--black);
+  border-bottom: 2px solid var(--black);
 }
 
 .hamburger-menu {
@@ -41,10 +41,6 @@
   cursor: pointer;
   color: var(--black);
   transition: 0.2s;
-}
-
-.hamburger-menu:hover {
-  transform: scale(1.1);
 }
 
 button {

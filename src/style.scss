@@ -1,16 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
-
-// If need, change your variables before importing Bulma
-
-* {
-  font-family: "STEAK";
-}
-
-@font-face {
-  font-family: STEAK;
-  src: url(../src/Fonts/TTCommons-Medium.woff) format("woff2");
-}
-
 .button.is-dark {
   transition: 0.2s;
 }
@@ -20,13 +7,6 @@
 
 :root {
   --black: #363636;
-
-  --syntaxYellow: #f0c05e;
-  --twitter: #00aced;
-  --facebook: #3b5998;
-  --google: #dd4b39;
-  --youtube: #bb0000;
-  --slack: #e8a723;
 
   --bgColor: var(--purp);
   --lineColor: var(--white-60);
@@ -58,10 +38,6 @@
   --heading-five: var(--smallFontSize);
   --heading-six: 0.64rem;
   --heading-seven: var(--smallestFontSize);
-
-  /* Fonts */
-  --headingFont: "Poppins", sans-serif;
-  --bodyFont: "Raleway", sans-serif;
 
   /* Z-Index */
   --headerLevel: 10;
