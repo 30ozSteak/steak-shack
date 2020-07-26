@@ -6,8 +6,8 @@ const Contact = () => {
   return (
     <div>
       <div className="form-intro">
-        <h2> Newsletter </h2>
-        <p> Be the first to know when we have new gear!</p>
+        <h2>Newsletter</h2>
+        <p>Be the first to know when we have new gear!</p>
       </div>
       <form
         name="contact"

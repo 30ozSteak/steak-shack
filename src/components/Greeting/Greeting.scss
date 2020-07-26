@@ -1,17 +1,40 @@
 .greeting {
-  height: 100vh;
-  text-align: center;
-  margin-top: 15vw;
+  text-align: left;
+  color: black;
+  margin: auto;
+  margin-top: 10rem;
+  width: 80% !important;
+  text-align: left;
+  transition: 0.6s;
+
   flex-direction: column;
-  .headers {
-    margin: auto;
-  }
   h1 {
-    font-size: var(--xtra-big-ass-heading);
+    font-size: 7vw;
+    line-height: 8vw;
     font-weight: 700;
   }
-  h2 {
-    font-size: var(--heading-two);
-    font-weight: 300;
+}
+
+h1.see-through {
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+h1.see-through:hover {
+  -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+@media (max-width: 400px) {
+  .greeting {
+    width: 100%;
+    lin h1 {
+      font-size: var(--heading-two);
+    }
+    h2 {
+      font-size: var(--heading-three);
+    }
   }
 }

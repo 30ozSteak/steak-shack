@@ -31,7 +31,9 @@ const Cart = ({ style, quantity }) => {
         <>
           {checkout.lineItems.map(item => (
             <div className="cart-item" key={item.id}>
-              <img src={item.variant.image.src} alt="" />
+              <div className="item-preview">
+                <img src={item.variant.image.src} alt="" />
+              </div>
               <div>
                 <h4>{item.title}</h4>
                 <p>${item.variant.price}</p>

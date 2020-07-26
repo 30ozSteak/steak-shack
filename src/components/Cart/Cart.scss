@@ -65,7 +65,7 @@
 
 .cart-open {
   background: #fafafa;
-  box-shadow: var(--elevation-4);
+  box-shadow: var(--elevation-5);
   height: 100%;
   right: 0;
   overflow: scroll;
@@ -77,6 +77,8 @@
 }
 
 .cart-open h5 {
+  text-align: center;
+  margin: auto;
   font-size: 1.2rem;
 }
 
@@ -113,13 +115,20 @@ h5 span {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  height: 10rem;
+  height: 12rem;
+  box-shadow: var(--elevation-1);
   overflow: hidden;
   margin: 1rem 0;
 }
 
 .cart-item img {
-  width: 50%;
   padding: 1rem;
-  height: 100%;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+@media (max-width: 600px) {
+  .cart-open {
+    width: 100%;
+  }
 }

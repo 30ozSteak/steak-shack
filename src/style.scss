@@ -5,8 +5,21 @@
   filter: brightness(1.5);
 }
 
+* {
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+
+.fullpage {
+  height: 100vh;
+  margin: auto;
+  margin-top: 15vw;
+  text-align: center;
+  font-size: var(--xtra-big-ass-heading);
+  font-weight: 700;
+}
 :root {
-  --black: #363636;
+  --black: #000000 !important;
 
   --bgColor: var(--purp);
   --lineColor: var(--white-60);

@@ -38,7 +38,7 @@ const Navbar = ({ siteTitle }) => {
     <>
       <Loader />
       <div className="nav">
-        {/* <Link to="/"> iaaafm.dev </Link> */}
+        <Link to="/"> nick dambrosio </Link>
         <div className="nav-right">
           <Nav />
           {transitions.map(
