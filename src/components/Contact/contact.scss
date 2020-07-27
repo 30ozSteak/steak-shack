@@ -1,3 +1,32 @@
-.hidden {
-  opacity: 0;
+.contact-container {
+  height: 60vh;
+  width: 75%;
+  margin: auto;
+  margin-top: 10rem;
+  color: black;
+  display: grid;
+  text-align: center;
+}
+
+.form-intro h2 {
+  font-size: 5vw;
+  line-height: 6vw;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  width: 15rem;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+}
+
+form button {
+  width: 15rem;
+  margin: auto;
 }

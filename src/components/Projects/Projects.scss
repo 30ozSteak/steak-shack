@@ -1,0 +1,42 @@
+.projects {
+  width: 75%;
+  margin: auto;
+  margin-top: 15rem;
+  color: black;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  font-weight: 600;
+  border-bottom: 2px solid black;
+}
+
+.project-card {
+  height: 40rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 5rem;
+}
+
+.project-card button {
+  padding: 1rem 3rem;
+  margin-top: 5rem;
+}
+
+.about a {
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
+}

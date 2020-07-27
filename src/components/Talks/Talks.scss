@@ -1,0 +1,31 @@
+.talks {
+  width: 75%;
+  margin: auto;
+  margin-top: 15rem;
+  color: black;
+}
+
+.talks h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+
+  padding: 1rem 0;
+  font-weight: 600;
+  border-bottom: 2px solid black;
+}
+
+.talk-card {
+  min-height: 10rem;
+}
+
+.talk-card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  width: 80%;
+  font-weight: 500;
+}
+
+.talk-card:hover h3 {
+  text-decoration: underline;
+  cursor: pointer;
+}
