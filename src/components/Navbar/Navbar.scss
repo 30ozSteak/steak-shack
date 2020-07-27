@@ -12,7 +12,6 @@
   font-weight: 500;
   display: flex;
   justify-content: space-between;
-  z-index: 50;
 }
 
 .nav-items {
@@ -24,7 +23,7 @@
 .nav a {
   font-size: 1.2rem;
   margin: 0 1rem;
-  color: var(--black);
+  color: black;
   transition: 0.2s;
 }
 
@@ -32,13 +31,8 @@
   display: flex;
 }
 
-.nav-right a {
-  border-bottom: 2px solid transparent;
-  // min-width: 5rem;
-}
-
 .nav-right a:hover {
-  border-bottom: 2px solid var(--black);
+  color: rgb(71, 71, 71);
 }
 
 .hamburger-menu {

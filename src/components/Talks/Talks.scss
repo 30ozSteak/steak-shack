@@ -7,15 +7,10 @@
 
 .talks h2 {
   font-size: 2rem;
-  margin: 1rem 0;
-
-  padding: 1rem 0;
+  margin: 3rem 0;
+  padding: 3rem 0;
   font-weight: 600;
   border-bottom: 2px solid black;
-}
-
-.talk-card {
-  min-height: 10rem;
 }
 
 .talk-card h3 {
@@ -28,4 +23,8 @@
 .talk-card:hover h3 {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.talk-topic {
+  color: rgb(51, 51, 51);
 }

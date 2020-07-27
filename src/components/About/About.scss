@@ -19,9 +19,17 @@
   width: 75%;
   margin: auto;
   margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .about a {
-  font-size: 1.5rem;
+  font-size: 2rem !important;
   font-weight: 500;
+  transition: 0.2s;
+  color: gray;
+}
+
+.about a:hover {
+  color: black;
 }
