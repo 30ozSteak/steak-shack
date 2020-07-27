@@ -1,11 +1,11 @@
-import React, { Suspense } from "react"
-
+import React from "react"
 import { Link } from "gatsby"
+
+import Fade from "react-reveal/Fade"
+import { FiExternalLink } from "react-icons/fi"
+
 import "../Projects/Projects.scss"
 import teller from "../../images/teller-screenshot-min.png"
-import Fade from "react-reveal/Fade"
-
-import { FiExternalLink } from "react-icons/fi"
 
 const Projects = ({}) => {
   return (
@@ -34,9 +34,11 @@ const Projects = ({}) => {
               View Project
             </button>
           </div>
-          <div className="right">
-            <img alt="teller mockup" src={teller} />
-          </div>
+          <Fade bottom>
+            <div className="right">
+              <img alt="teller mockup" src={teller} />
+            </div>
+          </Fade>
         </article>
       </Fade>
       <Fade bottom>
