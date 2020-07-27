@@ -23,7 +23,7 @@ const PRODUCTS_LISTING_QUERY = graphql`
             id
             localFile {
               childImageSharp {
-                fluid(maxWidth: 300, maxHeight: 400) {
+                fluid(maxWidth: 400, maxHeight: 400) {
                   ...GatsbyImageSharpFluid_tracedSVG
                 }
               }

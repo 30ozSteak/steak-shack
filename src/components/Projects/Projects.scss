@@ -6,20 +6,28 @@
 }
 
 .projects h2 {
-  margin: 2rem 0;
   font-size: 2rem;
   font-weight: 600;
   border-bottom: 2px solid black;
 }
 
 .project-card {
-  height: 30rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: start !important;
-  margin: auto;
-  align-items: start;
+  margin: 3rem 0;
+  height: 35rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  // flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-start;
   text-align: left;
+}
+
+.project-card .right {
+  display: flex;
+  justify-content: center;
+}
+.project-card img {
+  height: 35rem;
 }
 
 .project-card:nth-of-type(2) {
@@ -84,4 +92,8 @@
 
 .project-card svg {
   margin-left: 0.2rem;
+}
+
+.project-card .right {
+  background-color: pink;
 }

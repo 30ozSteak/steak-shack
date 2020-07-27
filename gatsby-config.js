@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `iaaafm.dev`,
-    description: `A place to buy steak branded apparel.`,
+    description: `Software Developer Portfolio`,
     author: `@iaaafm`,
   },
   plugins: [
@@ -21,6 +21,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/posts`,
+        name: "posts",
       },
     },
     `gatsby-transformer-sharp`,
