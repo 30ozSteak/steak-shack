@@ -1,19 +1,23 @@
-import React from "react"
+import React, { Suspense } from "react"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../components/Footer/Footer.scss"
 import Greeting from "../components/Greeting/Greeting"
+import Fade from "react-reveal/Fade"
 import About from "../components/About/About"
-import Contact from "../components/Contact/Contact"
-import Talks from "../components/Talks/Talks"
 import Projects from "../components/Projects/Projects"
+import Talks from "../components/Talks/Talks"
+import Contact from "../components/Contact/Contact"
 
 const IndexPage = () => (
   <div>
     <Layout>
       <SEO title="Home" />
-      <Greeting />
-      <About />
+      <Fade bottom>
+        <Greeting />
+        <About />
+      </Fade>
       <Projects />
       <Talks />
       <div className="divider" />

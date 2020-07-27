@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `iaaafm.dev`,
-    description: `Software Developer Portfolio`,
+    description: `Cultivator of the Digital Experience`,
     author: `@iaaafm`,
   },
   plugins: [
