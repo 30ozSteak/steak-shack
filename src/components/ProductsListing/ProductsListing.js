@@ -43,7 +43,7 @@ const ProductsListing = () => {
         render={({ products }) => {
           return (
             <div className="all-products-container">
-              <h2 className="title">All Products</h2>
+              <h2 className="category-title">All Products</h2>
               <div className="all-products">
                 {products.edges.map(({ node: product }) => (
                   <ProductsListingItem key={product.id} product={product} />

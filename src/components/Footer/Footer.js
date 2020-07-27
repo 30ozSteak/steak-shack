@@ -4,6 +4,11 @@ import "./Footer.scss"
 
 const Footer = ({ siteTitle }) => (
   <div className="foot">
+    <div className="find-me-block">
+      <a href="https://www.twitter.com/iaaafm">Github</a> |
+      <a href="https://www.twitter.com/iaaafm">Twitch</a> |
+      <a href="https://www.twitter.com/iaaafm">LinkedIn</a> |
+    </div>
     <div className="author-block">
       © {new Date().getFullYear()}{" "}
       <a href="https://www.twitter.com/iaaafm">iaaafm</a> Built with

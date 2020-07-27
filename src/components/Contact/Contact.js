@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="form-intro">
-        <h2>See what happens when great projects meet great design.</h2>
+        <h2>See what happens when great ideas meet great design.</h2>
       </div>
       <h2>I'm always looking for new and exciting challenges.</h2>
 

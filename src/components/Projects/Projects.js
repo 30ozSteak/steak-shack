@@ -13,8 +13,8 @@ const Projects = () => {
       </article>
       <article className="project-card">
         <h3 className="project-title">
-          Maintaining mental health <br /> and navigating uncertainty during
-          COVID-19
+          Promoting positive mental health <br /> and navigating uncertainty
+          during COVID-19
         </h3>
         <button class="button is-dark">View Project</button>
       </article>

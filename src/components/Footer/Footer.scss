@@ -1,18 +1,20 @@
 .foot {
-  color: var(--black);
+  color: white;
   display: flex;
-  background-color: white;
-  width: 100%;
+  background-color: black;
   height: 5rem;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 2rem;
+  border-top: 2px solid gray;
 }
 
-.author-block {
-  text-align: center;
-  margin: auto;
+.foot a {
+  color: white;
+  transition: 0.2s;
+  font-weight: 500;
 }
 
-.footer a {
-  color: black;
-  font-weight: 600;
-  background-color: white;
+.foot a:hover {
+  color: rgb(204, 204, 204);
 }

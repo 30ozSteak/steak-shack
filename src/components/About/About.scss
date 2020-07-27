@@ -33,3 +33,14 @@
 .about a:hover {
   color: black;
 }
+
+.divider {
+  background: url(../../images/IMG_1009-min.png);
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25rem;
+  margin: 3rem 0;
+  width: 100%;
+}
