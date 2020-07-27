@@ -21,9 +21,9 @@ const Nav = () => {
 
   return (
     <div className="nav-items">
-      <Link key="talks" to="/talks">
+      <Link key="About" to="/about">
         {" "}
-        Talks{" "}
+        About{" "}
       </Link>
       <Link key="projects" to="#work">
         {" "}

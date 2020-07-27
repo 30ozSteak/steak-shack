@@ -30,7 +30,8 @@ const Contact = () => {
             placeholder="Email"
           />
         </label>
-        <button className="is-dark button" type="submit">
+
+        <button className="round-button" type="submit">
           Send
         </button>
       </form>

@@ -7,22 +7,28 @@ const Talks = () => {
       <h2>Recent Talks.</h2>
       <article className="talk-card">
         <h3 className="talk-title">
-          Improving Discrete Latent Representations With Differentiable
-          Approximation Bridges
+          <a>
+            Improving Discrete Latent Representations With Differentiable
+            Approximation Bridges
+          </a>
         </h3>
         <p className="talk-topic">Methods and Algorithms</p>
       </article>
       <article className="talk-card">
         <h3 className="talk-title">
-          Improving Discrete Latent Representations With Differentiable
-          Approximation Bridges
+          <a>
+            Improving Discrete Latent Representations With Differentiable
+            Approximation Bridges
+          </a>
         </h3>
         <p className="talk-topic">Methods and Algorithms</p>
       </article>
       <article className="talk-card">
         <h3 className="talk-title">
-          Improving Discrete Latent Representations With Differentiable
-          Approximation Bridges
+          <a>
+            Improving Discrete Latent Representations With Differentiable
+            Approximation Bridges
+          </a>
         </h3>
         <p className="talk-topic">Methods and Algorithms</p>
       </article>

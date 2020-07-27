@@ -1,5 +1,7 @@
 import React from "react"
 import "./About.scss"
+import { Link } from "gatsby"
+import { GrFormNextLink } from "react-icons/gr"
 
 const About = () => {
   return (
@@ -11,6 +13,11 @@ const About = () => {
         inclusive workspace we need to ensure that there exists an atmosphere of
         accomodating diversity of thought, expressions, and views. <br /> <br />
         Only then will we truly soar.
+        <br />
+        <Link key="About" to="/about">
+          More about me
+          <GrFormNextLink />
+        </Link>
       </p>
     </section>
   )

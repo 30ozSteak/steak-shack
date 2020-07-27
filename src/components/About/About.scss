@@ -24,14 +24,17 @@
 }
 
 .about a {
-  font-size: 2rem !important;
-  font-weight: 500;
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
   transition: 0.2s;
-  color: gray;
+  color: black;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
 }
 
 .about a:hover {
-  color: black;
+  color: rgb(42, 42, 42);
 }
 
 .divider {
