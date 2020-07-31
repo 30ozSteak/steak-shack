@@ -4,10 +4,10 @@ import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
 import { FiExternalLink } from "react-icons/fi"
 
-import "../Projects/Projects.scss"
+import "../Projects/Projects.css"
 import teller from "../../images/teller-screenshot-min.png"
 
-const Projects = ({}) => {
+const Projects = () => {
   return (
     <div className="projects">
       <h2 id="work">Recent Work.</h2>

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import Layout from "../components/layout"
 import AddToCart from "../components/Cart/AddToCart"
-import "./ProductContainer.scss"
+import "./ProductContainer.css"
 
 const ProductDetailTemplate = ({ data }) => {
   const { shopifyProduct: product } = data

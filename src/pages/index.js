@@ -1,14 +1,14 @@
-import React, { Suspense } from "react"
+import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import "../components/Footer/Footer.scss"
 import Greeting from "../components/Greeting/Greeting"
 import Fade from "react-reveal/Fade"
 import About from "../components/About/About"
 import Projects from "../components/Projects/Projects"
 import Talks from "../components/Talks/Talks"
 import Contact from "../components/Contact/Contact"
+import Divider from "../components/Divider/Divider"
 
 const IndexPage = () => (
   <div>
@@ -21,6 +21,7 @@ const IndexPage = () => (
       <Projects />
       <Talks />
       <div className="divider" />
+      <Divider />
       <Contact />
     </Layout>
   </div>

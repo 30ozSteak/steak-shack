@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import ProductsListingItem from "./ProductsListingItem"
-import "./ProductListing.scss"
+import "./ProductListing.css"
 
 const PRODUCTS_LISTING_QUERY = graphql`
   query ProductsListingQuery {

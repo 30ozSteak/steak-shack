@@ -10,7 +10,7 @@ import CartIcon from "../Cart/CartIcon"
 import Loader from "../Loader"
 import Nav from "./Nav"
 
-import "./Navbar.scss"
+import "./Navbar.css"
 import "../../style.scss"
 
 const Navbar = ({ siteTitle }) => {

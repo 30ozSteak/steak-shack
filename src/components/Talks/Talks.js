@@ -1,7 +1,7 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
 
-import "./Talks.scss"
+import "./Talks.css"
 
 const Talks = () => {
   return (
@@ -10,7 +10,7 @@ const Talks = () => {
       <Fade bottom>
         <article className="talk-card">
           <h3 className="talk-title">
-            <a>
+            <a href="/">
               Improving Discrete Latent Representations With Differentiable
               Approximation Bridges
             </a>

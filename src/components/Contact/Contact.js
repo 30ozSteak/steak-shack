@@ -1,7 +1,7 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
 
-import "./Contact.scss"
+import "./Contact.css"
 
 const Contact = () => {
   return (
