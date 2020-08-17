@@ -4,7 +4,10 @@ import "./Greeting.css"
 const Greeting = () => {
   return (
     <div className="greeting">
-      <h1>I design & develop digital experiences.</h1>
+      <h1>Hi, I'm Nick.</h1>
+      <h1>
+        A developer focused on the pursuit of ideas that put people first.
+      </h1>
     </div>
   )
 }

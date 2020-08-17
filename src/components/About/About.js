@@ -10,19 +10,18 @@ const About = () => {
     <section className="about">
       <Fade bottom>
         <div className="hero-image"></div>
-        <p>
-          Hi, I'm Nick. A software developer focused on the pursuit of ideas
-          that put people first. I believe that in order to create and sustain
-          an inclusive workspace we need to ensure that there exists an
-          atmosphere of accomodating diversity of thought, expressions, and
-          views. <br /> <br />
-          <br />
-          <Link key="About" to="/about">
-            More about me
-            <GrFormNextLink />
-          </Link>
-        </p>
       </Fade>
+
+      <p>
+        I believe great teams and products are only made in environments that
+        embrace inclusivity and promote an accomodating diversity of thought,
+        expressions, and views. <br /> <br />
+        <br />
+        <Link key="About" to="/about">
+          More about me
+          <GrFormNextLink />
+        </Link>
+      </p>
     </section>
   )
 }

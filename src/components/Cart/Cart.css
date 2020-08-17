@@ -116,7 +116,6 @@ h5 span {
   align-items: center;
   box-sizing: border-box;
   height: 12rem;
-  box-shadow: var(--elevation-1);
   overflow: hidden;
   margin: 1rem 0;
 }

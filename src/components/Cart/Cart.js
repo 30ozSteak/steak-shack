@@ -99,8 +99,9 @@ const Cart = ({ style, quantity }) => {
           <div style={{ marginTop: "2rem" }}>
             <a
               href={checkout.webUrl}
+              id="checkoutButton"
               className="button is-fullwidth is-dark"
-              style={{ color: "white" }}
+              style={{ color: "white", margin: 0 }}
             >
               Checkout Now
             </a>

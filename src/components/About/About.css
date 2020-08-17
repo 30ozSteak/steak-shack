@@ -1,26 +1,18 @@
 .hero-image {
   background-color: black;
   margin: auto;
-  margin-top: 9rem;
+  margin-top: 5rem;
   height: 30rem;
-  width: 80%;
 }
 
 .about p {
   font-size: 2rem;
   margin: auto;
-  margin-top: 5rem;
+  line-height: 2rem;
   font-weight: 500;
   color: black;
-  width: 65%;
-}
-
-.about ul {
   width: 75%;
-  margin: auto;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 5rem;
 }
 
 .about a {
@@ -34,4 +26,10 @@
 
 .about a:hover {
   color: rgb(63, 63, 63);
+}
+
+@media (max-width: 800px) {
+  .about p {
+    width: 100%;
+  }
 }

@@ -19,11 +19,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar siteTitle={data.site.siteMetadata.title} />
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <main className="section" style={{ padding: 0 }}>
-          {children}
-        </main>
-      </div>
+      <main className="section">{children}</main>
       <Footer />
     </>
   )
