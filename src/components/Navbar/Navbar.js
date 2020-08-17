@@ -38,7 +38,9 @@ const Navbar = ({ siteTitle }) => {
     <>
       <Loader />
       <div className="nav">
-        <Link to="/"> Nick Dambrosio </Link>
+        <Link to="/">
+          <abbr title="its an anagram for mistake">IAAAFM</abbr>
+        </Link>
         <div className="nav-right">
           <Nav />
           {transitions.map(

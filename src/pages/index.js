@@ -14,14 +14,9 @@ const IndexPage = () => (
   <div>
     <Layout>
       <SEO title="Home" />
-      <Fade bottom>
-        <Greeting />
-        <About />
-      </Fade>
+      <Greeting />
+      <About />
       <Projects />
-      <Talks />
-      <div className="divider" />
-      <Divider />
       <Contact />
     </Layout>
   </div>

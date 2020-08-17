@@ -1,69 +1,66 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import Fade from "react-reveal/Fade"
-import { FiExternalLink } from "react-icons/fi"
 
 import "../Projects/Projects.css"
 import teller from "../../images/teller-screenshot-min.png"
 
+const data = [
+  {
+    name: "Teller",
+    id: 1,
+    description: "#a8edea → #fed6e3",
+    css: "#a8edea",
+    height: 100,
+  },
+  {
+    name: "Covid Quick Assist",
+    id: 2,
+    description: "#f5f7fa → #c3cfe2",
+    css: "#f5f7fa",
+    height: 200,
+  },
+  {
+    name: "Stomp",
+    id: 3,
+    description: "#e0c3fc → #8ec5fc",
+    css: "#e0c3fc",
+    height: 300,
+  },
+  {
+    name: "Nookbot",
+    id: 4,
+    description: "#f093fb → #f5576c",
+    css: "#f093fb",
+    height: 200,
+  },
+  {
+    name: "ITADW?",
+    id: 5,
+    description: "#fdfbfb → #ebedee",
+    css: "#E3FDF5",
+    height: 200,
+  },
+]
+
 const Projects = () => {
   return (
     <div className="projects">
-      <h2 id="work">Recent Work.</h2>
-      <Fade bottom>
-        <article className="project-card">
-          <div className="left">
-            <h3 className="project-title">
-              Building a Powerful <br /> Cryptocurrency AI Analyst
-            </h3>
-            <p className="project-description">
-              React, Redux, Python, IBM Watson, Coinbase
-            </p>
-            <div className="project-links">
-              <Link key="Github" to="">
-                Github
-                <FiExternalLink />
-              </Link>
-              <Link key="Live" to="">
-                Live
-                <FiExternalLink />
-              </Link>
-            </div>
-            <button aria-label="view-project-button" className="round-button">
-              View Project
-            </button>
+      <div className="projects-grid">
+        <div>
+          <h2>Explore Recent Works</h2>
+          <p>I'm constantly refining my product and skillset.</p>
+        </div>
+        {data.map(item => (
+          <div
+            className="project-card"
+            style={{ background: item.css }}
+            key={item.id}
+          >
+            {/* <h1>{item.name}</h1> */}
           </div>
-          <Fade bottom>
-            <div className="right">
-              <img alt="teller mockup" src={teller} />
-            </div>
-          </Fade>
-        </article>
-      </Fade>
-      <Fade bottom>
-        <article className="project-card">
-          <h3 className="project-title">
-            Prioritizing Mental Health <br /> During the Pandemic
-          </h3>
-          <p className="project-description">
-            React, Firebase, D3, SCSS, Tailwind CSS,
-          </p>
-          <div className="project-links">
-            <Link key="Github" to="">
-              Github
-              <FiExternalLink />
-            </Link>
-            <Link key="Live" to="">
-              Live
-              <FiExternalLink />
-            </Link>
-          </div>
-          <button aria-label="view-project-button" className="round-button">
-            View Project
-          </button>
-        </article>
-      </Fade>
+        ))}
+      </div>
     </div>
   )
 }

@@ -10,9 +10,15 @@
   flex-direction: column;
 }
 h1 {
-  font-size: 6rem;
+  font-size: 3rem;
   line-height: 100%;
   font-weight: 700;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  /* line-height: 3rem; */
 }
 
 @media (max-width: 800px) {

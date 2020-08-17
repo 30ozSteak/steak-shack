@@ -1,23 +1,13 @@
 .foot {
-  color: white;
-  display: flex;
-  background-color: black;
   height: 5rem;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 0 2rem;
-  border-top: 2px solid gray;
+  padding: 2rem;
+  border-top: 1px solid lightgray;
   z-index: 100;
-}
-
-.find-me-block a {
-  margin: 0 1rem;
+  text-align: center;
 }
 
 .foot a {
-  color: white;
-  transition: 0.2s;
-  font-weight: 500;
+  color: black;
 }
 
 .foot a:hover {
