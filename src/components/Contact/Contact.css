@@ -1,6 +1,7 @@
 .contact-section {
   text-align: center;
   display: flex;
+  margin-top: 8rem;
   flex-direction: column;
 }
 

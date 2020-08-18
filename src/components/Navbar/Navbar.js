@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { StoreContext } from "../../context/StoreContext"
 import { useTransition } from "react-spring"
 import Hamburger from "./Hamburger"
+import Menu from "../Menu/Menu"
 
 import Cart from "../Cart/Cart"
 import CartIcon from "../Cart/CartIcon"
@@ -54,6 +55,7 @@ const Navbar = ({ siteTitle }) => {
           />
           <Hamburger isNavOpen={isNavOpen} toggleNavOpen={toggleNavOpen} />
         </div>
+        <Menu isOpen={isNavOpen} />
       </div>
     </>
   )

@@ -7,6 +7,7 @@ const client = Client.buildClient({
 })
 
 const defaultValues = {
+  isOpen: false,
   isNavOpen: false,
   isCartOpen: false,
   isLoading: false,

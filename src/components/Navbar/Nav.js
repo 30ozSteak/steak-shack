@@ -25,7 +25,7 @@ const Nav = () => {
         {" "}
         About{" "}
       </Link>
-      <Link key="projects" to="/work">
+      <Link key="projects" to="#work">
         {" "}
         Work{" "}
       </Link>
