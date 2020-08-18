@@ -1,8 +1,9 @@
 .hero-image {
   background-color: black;
-  margin: auto;
-  margin-top: 5rem;
+  width: 100%;
+  left: 0;
   height: 30rem;
+  margin: 2rem 0;
 }
 
 .about p {

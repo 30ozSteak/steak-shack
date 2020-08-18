@@ -28,6 +28,7 @@
   height: 1.5rem;
   width: 1.5rem;
   transition: 0.2s;
+  position: relative;
 }
 
 .cart-notification {

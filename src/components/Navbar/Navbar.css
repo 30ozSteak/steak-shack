@@ -35,16 +35,20 @@
 }
 
 .hamburger-menu {
-  margin: 0 1rem;
   cursor: pointer;
   color: var(--black);
   transition: 0.2s;
   display: none;
 }
 
+.nav button:nth-child(3) {
+  z-index: 9000 !important;
+  outline: none;
+}
+
 button {
   border: 1px solid transparent;
-  background-color: white;
+  background-color: transparent;
 }
 
 @media (max-width: 600px) {

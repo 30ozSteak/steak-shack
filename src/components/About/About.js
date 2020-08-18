@@ -3,14 +3,14 @@ import "./About.css"
 import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
 
-import { GrFormNextLink } from "react-icons/gr"
+import { BsArrowRight } from "react-icons/bs"
 
 const About = () => {
   return (
     <section className="about">
-      <Fade bottom>
+      {/* <Fade bottom>
         <div className="hero-image"></div>
-      </Fade>
+      </Fade> */}
 
       <p>
         I believe great teams and products are only made in environments that
@@ -19,7 +19,7 @@ const About = () => {
         <br />
         <Link key="About" to="/about">
           More about me
-          <GrFormNextLink />
+          <BsArrowRight style={{ marginLeft: "1rem" }} />
         </Link>
       </p>
     </section>

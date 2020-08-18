@@ -5,9 +5,7 @@ const Greeting = () => {
   return (
     <div className="greeting">
       <h1>Hi, I'm Nick.</h1>
-      <h1>
-        A developer focused on the pursuit of ideas that put people first.
-      </h1>
+      <h1>I design and develop digital experiences</h1>
     </div>
   )
 }

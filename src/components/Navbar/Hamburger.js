@@ -10,17 +10,19 @@ let openedHamburger = {
   center: "translate(2, 19) rotate(0)",
   bottom: "translate(2, 31) rotate(0)",
   color: "#000",
+  zIndex: 9000,
 }
 
 let closedHamburger = {
   top: "translate(7, 32) rotate(-45)",
   center: "translate(10, 4) rotate(45)",
   bottom: "translate(7, 32) rotate(-45)",
-  color: "#000",
+  color: "#fff",
+  zIndex: 9000,
 }
 
 const Hamburger = ({ isNavOpen, toggleNavOpen }) => {
-  let { top, center, bottom, color } = useSpring({
+  let { top, center, bottom, color, zIndex } = useSpring({
     to: isNavOpen ? closedHamburger : openedHamburger,
     config: config.stiff,
   })
@@ -34,6 +36,7 @@ const Hamburger = ({ isNavOpen, toggleNavOpen }) => {
         fill={color}
         xmlns="http://www.w3.org/2000/svg"
         className="hamburger-menu"
+        zIndex={zIndex}
       >
         <animated.rect width="40" height="3.5" rx="0" transform={top} />
         <animated.rect width="40" height="3.5" rx="0" transform={center} />
